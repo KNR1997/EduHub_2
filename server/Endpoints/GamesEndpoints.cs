@@ -1,78 +1,74 @@
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
-using Server.Api.Data;
-using Server.Api.Dtos;
 using Server.Api.Entities;
-using Server.Api.Mapping;
+using Server.Api.Repository;
 
 namespace Server.Api.Endpoints;
 
 public static class GamesEndPoints
 {
-    const string GetGameEndpoitnName = "GetGame";
+    const string GetGameEndpointName = "GetGame";
 
-    public static RouteGroupBuilder MapGamesEndpoints(this WebApplication app)
+    public static RouteGroupBuilder MapGamesEndpoints(this IEndpointRouteBuilder routes)
     {
-        var group = app.MapGroup("games").WithParameterValidation();
+        var group = routes.MapGroup("/games").WithParameterValidation();
 
-        group.MapGet("/", (GameStoreContext dbContext) =>
-            dbContext.Games
-                    .Include(game => game.Genre)
-                    .Select(game => game.ToGameSummaryDto())
-                    .AsNoTracking());
-
-        // GET /games/1
-        group.MapGet("/{id}", (int id, GameStoreContext dbContext) =>
-        {
-            Game? game = dbContext.Games.Find(id);
-
-            return game is null ?
-                Results.NotFound() : Results.Ok(game.ToGameDetailsDto());
-        })
-        .WithName(GetGameEndpoitnName);
-
-        // POST /games
-        group.MapPost("/", (CreateGameDto newGame, GameStoreContext dbContext) =>
-        {
-            Game game = newGame.ToEntity();
-
-            dbContext.Games.Add(game);
-            dbContext.SaveChanges();
-
-            return Results.CreatedAtRoute(
-                GetGameEndpoitnName,
-                new { id = game.Id },
-                game.ToGameDetailsDto());
-        });
-
-        group.MapPut("/{id}", (int id, UpdateGameDto updatedGame, GameStoreContext dbContext) =>
-        {
-            var exitingGame = dbContext.Games.Find(id);
-
-            if (exitingGame is null)
-            {
-                return Results.NotFound();
-            }
-
-            dbContext.Entry(exitingGame)
-                    .CurrentValues
-                    .SetValues(updatedGame.ToEntity(id));
-
-            dbContext.SaveChanges();
-
-            return Results.NoContent();
-        });
-
-        group.MapDelete("/{id}", (int id, GameStoreContext dbContext) =>
-        {
-            dbContext.Games
-                .Where(game => game.Id == id)
-                .ExecuteDelete();
-
-            return Results.NoContent();
-        });
+        group.MapGet("/", GetAllGames);
+        group.MapGet("/{id}", GetGame).WithName(GetGameEndpointName);
+        group.MapPost("/", CreateGame);
+        group.MapPut("/{id}", UpdateGame);
+        group.MapDelete("/{id}", DeleteGame);
 
         return group;
     }
 
+    private static async Task<IResult> GetAllGames(IGamesRepository repository)
+    {
+        var games = await repository.GetAllAsync();
+        return Results.Ok(games);
+    }
+
+    private static async Task<IResult> GetGame(IGamesRepository repository, int id)
+    {
+        var game = await repository.GetAsync(id);
+
+        if (game is null)
+        {
+            return Results.NotFound();
+        }
+
+        return Results.Ok(game);
+    }
+
+    private static async Task<IResult> CreateGame(IGamesRepository repository, Game game)
+    {
+        await repository.CreateAsync(game);
+        return Results.CreatedAtRoute(GetGameEndpointName, new { id = game.Id }, game);
+    }
+
+    private static async Task<IResult> UpdateGame(IGamesRepository repository, int id, Game updateGame)
+    {
+        var existingGame = await repository.GetAsync(id);
+
+        if (existingGame is null)
+        {
+            return Results.NotFound();
+        }
+
+        // Update logic...
+
+        await repository.UpdateAsync(existingGame);
+
+        return Results.NoContent();
+    }
+
+    private static async Task<IResult> DeleteGame(IGamesRepository repository, int id)
+    {
+        var game = await repository.GetAsync(id);
+
+        if (game is not null)
+        {
+            await repository.DeleteAsynce(id);
+        }
+
+        return Results.NoContent();
+    }
 }
