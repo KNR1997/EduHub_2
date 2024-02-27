@@ -1,0 +1,6 @@
+@TMA_HostAddress = http://localhost:5294
+
+GET {{TMA_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
