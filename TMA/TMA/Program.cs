@@ -3,12 +3,17 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Filters;
 using TMA.Data;
+using TMA.Interfaces;
+using TMA.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddScoped<IWorkspaceRepository, WorkspaceRepository>();
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>

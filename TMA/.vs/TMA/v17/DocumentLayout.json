@@ -3,32 +3,36 @@
   "WorkspaceRootPath": "D:\\Task-Manager-Application\\TMA\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\task-manager-application\\tma\\tma\\controllers\\workspacecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\controllers\\workspacecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\task-manager-application\\tma\\tma\\interfaces\\iworkspacerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\interfaces\\iworkspacerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\task-manager-application\\tma\\tma\\repository\\workspacerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\repository\\workspacerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\task-manager-application\\tma\\tma\\models\\workspace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\models\\workspace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\task-manager-application\\tma\\tma\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\task-manager-application\\tma\\tma\\helper\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\helper\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\task-manager-application\\tma\\tma\\dtos\\workspacedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\dtos\\workspacedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\task-manager-application\\tma\\tma\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\task-manager-application\\tma\\tma\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\task-manager-application\\tma\\tma\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\task-manager-application\\tma\\tma\\tma.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\tma.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\task-manager-application\\tma\\tma\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\task-manager-application\\tma\\tma\\migrations\\20240227191256_identityuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\migrations\\20240227191256_identityuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,91 +42,110 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "D:\\Task-Manager-Application\\TMA\\TMA\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "TMA\\Controllers\\WeatherForecastController.cs",
-              "ToolTip": "D:\\Task-Manager-Application\\TMA\\TMA\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "TMA\\Controllers\\WeatherForecastController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-27T19:18:22.038Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "D:\\Task-Manager-Application\\TMA\\TMA\\WeatherForecast.cs",
-              "RelativeDocumentMoniker": "TMA\\WeatherForecast.cs",
-              "ToolTip": "D:\\Task-Manager-Application\\TMA\\TMA\\WeatherForecast.cs",
-              "RelativeToolTip": "TMA\\WeatherForecast.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-27T19:18:16.014Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "20240227191256_IdentityUser.cs",
-              "DocumentMoniker": "D:\\Task-Manager-Application\\TMA\\TMA\\Migrations\\20240227191256_IdentityUser.cs",
-              "RelativeDocumentMoniker": "TMA\\Migrations\\20240227191256_IdentityUser.cs",
-              "ToolTip": "D:\\Task-Manager-Application\\TMA\\TMA\\Migrations\\20240227191256_IdentityUser.cs",
-              "RelativeToolTip": "TMA\\Migrations\\20240227191256_IdentityUser.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-27T19:12:56.155Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TMA.csproj",
-              "DocumentMoniker": "D:\\Task-Manager-Application\\TMA\\TMA\\TMA.csproj",
-              "RelativeDocumentMoniker": "TMA\\TMA.csproj",
-              "ToolTip": "D:\\Task-Manager-Application\\TMA\\TMA\\TMA.csproj",
-              "RelativeToolTip": "TMA\\TMA.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-02-27T17:56:50.643Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Task-Manager-Application\\TMA\\TMA\\appsettings.json",
-              "RelativeDocumentMoniker": "TMA\\appsettings.json",
-              "ToolTip": "D:\\Task-Manager-Application\\TMA\\TMA\\appsettings.json",
-              "RelativeToolTip": "TMA\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAABLAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-02-27T17:37:15.659Z"
+              "Title": "MappingProfiles.cs",
+              "DocumentMoniker": "D:\\Task-Manager-Application\\TMA\\TMA\\Helper\\MappingProfiles.cs",
+              "RelativeDocumentMoniker": "TMA\\Helper\\MappingProfiles.cs",
+              "ToolTip": "D:\\Task-Manager-Application\\TMA\\TMA\\Helper\\MappingProfiles.cs",
+              "RelativeToolTip": "TMA\\Helper\\MappingProfiles.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-28T07:15:14.812Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "DataContext.cs",
-              "DocumentMoniker": "D:\\Task-Manager-Application\\TMA\\TMA\\Data\\DataContext.cs",
-              "RelativeDocumentMoniker": "TMA\\Data\\DataContext.cs",
-              "ToolTip": "D:\\Task-Manager-Application\\TMA\\TMA\\Data\\DataContext.cs",
-              "RelativeToolTip": "TMA\\Data\\DataContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Title": "Workspace.cs",
+              "DocumentMoniker": "D:\\Task-Manager-Application\\TMA\\TMA\\Models\\Workspace.cs",
+              "RelativeDocumentMoniker": "TMA\\Models\\Workspace.cs",
+              "ToolTip": "D:\\Task-Manager-Application\\TMA\\TMA\\Models\\Workspace.cs",
+              "RelativeToolTip": "TMA\\Models\\Workspace.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-27T17:29:16.11Z"
+              "WhenOpened": "2024-02-28T06:32:41.263Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
+              "Title": "WorkspaceDto.cs",
+              "DocumentMoniker": "D:\\Task-Manager-Application\\TMA\\TMA\\Dtos\\WorkspaceDto.cs",
+              "RelativeDocumentMoniker": "TMA\\Dtos\\WorkspaceDto.cs",
+              "ToolTip": "D:\\Task-Manager-Application\\TMA\\TMA\\Dtos\\WorkspaceDto.cs",
+              "RelativeToolTip": "TMA\\Dtos\\WorkspaceDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-28T07:05:51.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Task-Manager-Application\\TMA\\TMA\\Program.cs",
               "RelativeDocumentMoniker": "TMA\\Program.cs",
               "ToolTip": "D:\\Task-Manager-Application\\TMA\\TMA\\Program.cs",
               "RelativeToolTip": "TMA\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAoAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-27T17:23:32.504Z",
+              "WhenOpened": "2024-02-28T06:27:25.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "D:\\Task-Manager-Application\\TMA\\TMA\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "TMA\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "D:\\Task-Manager-Application\\TMA\\TMA\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "TMA\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-28T06:16:29.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WorkspaceController.cs",
+              "DocumentMoniker": "D:\\Task-Manager-Application\\TMA\\TMA\\Controllers\\WorkspaceController.cs",
+              "RelativeDocumentMoniker": "TMA\\Controllers\\WorkspaceController.cs",
+              "ToolTip": "D:\\Task-Manager-Application\\TMA\\TMA\\Controllers\\WorkspaceController.cs",
+              "RelativeToolTip": "TMA\\Controllers\\WorkspaceController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-28T06:16:21.322Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WorkspaceRepository.cs",
+              "DocumentMoniker": "D:\\Task-Manager-Application\\TMA\\TMA\\Repository\\WorkspaceRepository.cs",
+              "RelativeDocumentMoniker": "TMA\\Repository\\WorkspaceRepository.cs",
+              "ToolTip": "D:\\Task-Manager-Application\\TMA\\TMA\\Repository\\WorkspaceRepository.cs",
+              "RelativeToolTip": "TMA\\Repository\\WorkspaceRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-28T06:10:40.42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IWorkspaceRepository.cs",
+              "DocumentMoniker": "D:\\Task-Manager-Application\\TMA\\TMA\\Interfaces\\IWorkspaceRepository.cs",
+              "RelativeDocumentMoniker": "TMA\\Interfaces\\IWorkspaceRepository.cs",
+              "ToolTip": "D:\\Task-Manager-Application\\TMA\\TMA\\Interfaces\\IWorkspaceRepository.cs",
+              "RelativeToolTip": "TMA\\Interfaces\\IWorkspaceRepository.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAASwA0AAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-28T06:08:44.689Z",
               "EditorCaption": ""
             }
           ]
