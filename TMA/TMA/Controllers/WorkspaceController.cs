@@ -29,7 +29,7 @@ namespace TMA.Controllers
             if (workspaceDto == null)
                 return BadRequest(ModelState);
 
-            _workspaceRepository.CreateWorkspace(workspaceDto.Name, workspaceDto.Description);
+            _workspaceRepository.CreateWorkspace(workspaceDto.Name);
 
             return Ok("Successfully created");
         }

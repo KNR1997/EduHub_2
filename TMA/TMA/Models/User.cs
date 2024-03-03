@@ -5,7 +5,7 @@ namespace TMA.Models
     public class User : IdentityUser
     {
         public ICollection<Ticket> Tickets { get; set; }
-        public ICollection<Workspace> Workspaces { get; set; }
+        public ICollection<UserWorkspace> UserWorkspaces { get; set; }
     }
 }
       

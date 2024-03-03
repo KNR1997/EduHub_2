@@ -13,12 +13,11 @@ namespace TMA.Repository
             _context = context;
         }
 
-        public bool CreateWorkspace(string name, string description)
+        public bool CreateWorkspace(string name)
         {
             var workspace = new Workspace()
             {
                 Name = name,
-                Description = description,
             };
 
             _context.Add(workspace);

@@ -4,8 +4,7 @@
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Description { get; set; }
-        public ICollection<User> User { get; set; }
-        public ICollection<Ticket> Tickets { get; set; }
+        public User Owner { get; set; }
+        public ICollection<UserWorkspace> UserWorkspaces { get; set; }
     }
 }

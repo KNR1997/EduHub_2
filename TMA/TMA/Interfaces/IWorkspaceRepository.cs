@@ -11,7 +11,7 @@ namespace TMA.Interfaces
         Workspace GetWorkspace(string name);
         bool WorkspaceExists(int workspaceId);
 
-        bool CreateWorkspace(string name, string description);
+        bool CreateWorkspace(string name);
 
         bool Save();
     }
