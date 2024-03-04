@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "D:\\Task-Manager-Application\\TMA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\task-manager-application\\tma\\tma\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\task-manager-application\\tma\\tma\\repository\\workspacerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\repository\\workspacerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\task-manager-application\\tma\\tma\\interfaces\\iworkspacerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\interfaces\\iworkspacerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\task-manager-application\\tma\\tma\\services\\workspaceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\services\\workspaceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\task-manager-application\\tma\\tma\\controllers\\workspacecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\controllers\\workspacecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\task-manager-application\\tma\\tma\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\task-manager-application\\tma\\tma\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\task-manager-application\\tma\\tma\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,57 +30,72 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": ".gitignore",
-              "DocumentMoniker": "D:\\Task-Manager-Application\\TMA\\TMA\\.gitignore",
-              "RelativeDocumentMoniker": "TMA\\.gitignore",
-              "ToolTip": "D:\\Task-Manager-Application\\TMA\\TMA\\.gitignore",
-              "RelativeToolTip": "TMA\\.gitignore",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAABQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-03-03T06:33:52.227Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Task-Manager-Application\\TMA\\TMA\\Program.cs",
               "RelativeDocumentMoniker": "TMA\\Program.cs",
               "ToolTip": "D:\\Task-Manager-Application\\TMA\\TMA\\Program.cs",
               "RelativeToolTip": "TMA\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAAAXAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-03T06:09:17.193Z",
+              "WhenOpened": "2024-03-04T04:00:41.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WorkspaceController.cs",
+              "DocumentMoniker": "D:\\Task-Manager-Application\\TMA\\TMA\\Controllers\\WorkspaceController.cs",
+              "RelativeDocumentMoniker": "TMA\\Controllers\\WorkspaceController.cs",
+              "ToolTip": "D:\\Task-Manager-Application\\TMA\\TMA\\Controllers\\WorkspaceController.cs",
+              "RelativeToolTip": "TMA\\Controllers\\WorkspaceController.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAA/wCcAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T03:51:11.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WorkspaceRepository.cs",
+              "DocumentMoniker": "D:\\Task-Manager-Application\\TMA\\TMA\\Repository\\WorkspaceRepository.cs",
+              "RelativeDocumentMoniker": "TMA\\Repository\\WorkspaceRepository.cs",
+              "ToolTip": "D:\\Task-Manager-Application\\TMA\\TMA\\Repository\\WorkspaceRepository.cs*",
+              "RelativeToolTip": "TMA\\Repository\\WorkspaceRepository.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T03:51:47.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IWorkspaceRepository.cs",
+              "DocumentMoniker": "D:\\Task-Manager-Application\\TMA\\TMA\\Interfaces\\IWorkspaceRepository.cs",
+              "RelativeDocumentMoniker": "TMA\\Interfaces\\IWorkspaceRepository.cs",
+              "ToolTip": "D:\\Task-Manager-Application\\TMA\\TMA\\Interfaces\\IWorkspaceRepository.cs",
+              "RelativeToolTip": "TMA\\Interfaces\\IWorkspaceRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T03:51:29.074Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\Task-Manager-Application\\TMA\\TMA\\Models\\User.cs",
-              "RelativeDocumentMoniker": "TMA\\Models\\User.cs",
-              "ToolTip": "D:\\Task-Manager-Application\\TMA\\TMA\\Models\\User.cs",
-              "RelativeToolTip": "TMA\\Models\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "WorkspaceService.cs",
+              "DocumentMoniker": "D:\\Task-Manager-Application\\TMA\\TMA\\Services\\WorkspaceService.cs",
+              "RelativeDocumentMoniker": "TMA\\Services\\WorkspaceService.cs",
+              "ToolTip": "D:\\Task-Manager-Application\\TMA\\TMA\\Services\\WorkspaceService.cs",
+              "RelativeToolTip": "TMA\\Services\\WorkspaceService.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAiwBQAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-03T05:37:40.372Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DataContext.cs",
-              "DocumentMoniker": "D:\\Task-Manager-Application\\TMA\\TMA\\Data\\DataContext.cs",
-              "RelativeDocumentMoniker": "TMA\\Data\\DataContext.cs",
-              "ToolTip": "D:\\Task-Manager-Application\\TMA\\TMA\\Data\\DataContext.cs",
-              "RelativeToolTip": "TMA\\Data\\DataContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-03T05:36:08.927Z"
+              "WhenOpened": "2024-03-03T19:25:26.98Z",
+              "EditorCaption": ""
             }
           ]
         }

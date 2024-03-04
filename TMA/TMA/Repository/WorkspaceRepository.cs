@@ -1,4 +1,5 @@
 ﻿using TMA.Data;
+using TMA.Dtos;
 using TMA.Interfaces;
 using TMA.Models;
 
@@ -13,19 +14,28 @@ namespace TMA.Repository
             _context = context;
         }
 
-        public bool CreateWorkspace(string name)
+        public bool SaveOrUpdateWorkspace(Workspace workspace)
         {
-            var workspace = new Workspace()
+            if (workspace.Id == 0)
             {
-                Name = name,
-            };
+                _context.Add(workspace); 
+            }
+            else
+            {
+                _context.Update(workspace); 
+            }
 
-            _context.Add(workspace);
+            return Save(); 
+        }
 
+        public bool DeleteWorkspace(Workspace workspace)
+        {
+            _context.Remove(workspace);
             return Save();
         }
 
         public Workspace GetWorkspace(int id)
+
         {
             return _context.Workspaces.Where(w => w.Id == id).FirstOrDefault();
         }
@@ -33,6 +43,11 @@ namespace TMA.Repository
         public Workspace GetWorkspace(string name)
         {
             return _context.Workspaces.Where(w => w.Name == name).FirstOrDefault();
+        }
+
+        public ICollection<Workspace> GetWorkspaceByUser(User user)
+        {
+            return _context.Workspaces.Where(w => w.Owner == user).ToList();
         }
 
         public ICollection<Workspace> GetWorkspaces() 
@@ -49,6 +64,11 @@ namespace TMA.Repository
         public bool WorkspaceExists(int workspaceId)
         {
             return _context.Workspaces.Any(w => w.Id == workspaceId);
+        }
+
+        public bool DeleteWorkspace(int workspaceId)
+        {
+            throw new NotImplementedException();
         }
     }
 }

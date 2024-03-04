@@ -1,44 +1,56 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using TMA.Data;
 using TMA.Dtos;
 using TMA.Interfaces;
 using TMA.Models;
+using System.Security.Claims;
+using TMA.Repository;
+using TMA.Services;
 
 namespace TMA.Controllers
 {
-    [Microsoft.AspNetCore.Mvc.Route("api/[controller]")]
     [ApiController]
+    [Route("[controller]")]
     public class WorkspaceController : Controller
     {
         private readonly IWorkspaceRepository _workspaceRepository;
         private readonly IMapper _mapper;
+        private readonly IUserRepository _userRepository;
+        private readonly WorkspaceService _workspaceService;
 
-        public WorkspaceController(IWorkspaceRepository workspaceRepository, IMapper mapper)
+        public WorkspaceController(IWorkspaceRepository workspaceRepository, IMapper mapper, IUserRepository userRepository, WorkspaceService workspaceService)
         {
             _workspaceRepository = workspaceRepository;
             _mapper = mapper;
+            _userRepository = userRepository;
+            _workspaceService = workspaceService;
         }
 
-        [HttpPost]
+        [HttpPost, Authorize]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
-        public IActionResult CreateWorkspaces([FromBody] WorkspaceDto workspaceDto)
+        public IActionResult SaveOrUpdateWorkspaces([FromBody] WorkspaceDto workspaceDto)
         {
             if (workspaceDto == null)
                 return BadRequest(ModelState);
 
-            _workspaceRepository.CreateWorkspace(workspaceDto.Name);
+            var userName = User.Identity?.Name;
+            _workspaceService.SaveOrUpdateWorkspace(workspaceDto, userName);
 
             return Ok("Successfully created");
         }
 
-        [HttpGet]
+        [HttpGet, Authorize]
         [ProducesResponseType(200, Type = typeof(IEnumerable<Workspace>))]
-        public IActionResult GetWorkspaces()
+        public IActionResult GetWorkspacesByUser()
         {
-            var workspaces = _mapper.Map<List<WorkspaceDto>>(_workspaceRepository.GetWorkspaces());
+            var userName = User.Identity?.Name;
+
+            var userModel = _userRepository.GetUser(userName);
+
+            var workspaces = _mapper.Map<List<WorkspaceDto>>(_workspaceRepository.GetWorkspaceByUser(userModel));
 
             if (!ModelState.IsValid)
                 return BadRequest(workspaces);
@@ -46,20 +58,23 @@ namespace TMA.Controllers
             return Ok(workspaces);
         }
 
-        [HttpGet("{workspaceId}")]
-        [ProducesResponseType(200, Type = typeof(Workspace))]
+        [HttpDelete, Authorize]
+        [ProducesResponseType(200)]
         [ProducesResponseType(400)]
-        public IActionResult GetWorkspace(int workspaceId)
+        [ProducesResponseType(404)]
+        public IActionResult DeleteWorkspace(int workspaceId)
         {
+            var userName = User.Identity?.Name;
+            var userModel = _userRepository.GetUser(userName);
+
             if (!_workspaceRepository.WorkspaceExists(workspaceId))
+            {
                 return NotFound();
+            }
 
-            var workspaces = _mapper.Map<List<WorkspaceDto>>(_workspaceRepository.GetWorkspace(workspaceId));
+            _workspaceRepository.DeleteWorkspace(workspaceId);
 
-            if (!ModelState.IsValid)
-                return BadRequest(workspaces);
-
-            return Ok(workspaces);
+            return Ok("Successfully deleted");
         }
     }
 }

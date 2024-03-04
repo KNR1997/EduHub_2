@@ -1,4 +1,5 @@
-﻿using TMA.Models;
+﻿using TMA.Dtos;
+using TMA.Models;
 
 namespace TMA.Interfaces
 {
@@ -6,13 +7,19 @@ namespace TMA.Interfaces
     {
         ICollection<Workspace> GetWorkspaces();
 
+        bool SaveOrUpdateWorkspace(Workspace workspace);
+
+        ICollection<Workspace> GetWorkspaceByUser(User user);
+
+        bool DeleteWorkspace(int workspaceId);
+
         Workspace GetWorkspace(int id);
 
         Workspace GetWorkspace(string name);
+
         bool WorkspaceExists(int workspaceId);
 
-        bool CreateWorkspace(string name);
-
         bool Save();
+ 
     }
 }
