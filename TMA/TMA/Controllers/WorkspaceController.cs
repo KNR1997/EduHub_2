@@ -1,12 +1,9 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
-using TMA.Data;
 using TMA.Dtos;
 using TMA.Interfaces;
 using TMA.Models;
-using System.Security.Claims;
-using TMA.Repository;
 using TMA.Services;
 
 namespace TMA.Controllers
@@ -64,15 +61,13 @@ namespace TMA.Controllers
         [ProducesResponseType(404)]
         public IActionResult DeleteWorkspace(int workspaceId)
         {
-            var userName = User.Identity?.Name;
-            var userModel = _userRepository.GetUser(userName);
-
             if (!_workspaceRepository.WorkspaceExists(workspaceId))
             {
                 return NotFound();
+            } else
+            {
+                _workspaceService.DeleteWorkspace(workspaceId);
             }
-
-            _workspaceRepository.DeleteWorkspace(workspaceId);
 
             return Ok("Successfully deleted");
         }

@@ -7,56 +7,41 @@ namespace TMA.Services
 {
     public class WorkspaceService
     {
+        private readonly IUserRepository _userRepository;
         private readonly IWorkspaceRepository _workspaceRepository;
         private readonly IMapper _mapper;
-        private readonly IUserRepository _userRepository;
 
-        public WorkspaceService(IWorkspaceRepository workspaceRepository, IMapper mapper, IUserRepository userRepository)
+        public WorkspaceService(IUserRepository userRepository, IMapper mapper, IWorkspaceRepository workspaceRepository)
         {
+            _userRepository = userRepository;
             _workspaceRepository = workspaceRepository;
             _mapper = mapper;
-            _userRepository = userRepository;
         }
 
         public void SaveOrUpdateWorkspace(WorkspaceDto updateDTO, string userName)
         {
             Workspace workspace;
             bool isNew = (updateDTO.Id == 0);
-            var owner = _userRepository.GetUser(userName);
+            User user = _userRepository.GetUser(userName);
 
-            if (!isNew) 
+            if (!isNew)
             {
                 workspace = _workspaceRepository.GetWorkspace(updateDTO.Id);
-            } else
+            }
+            else
             {
-                workspace   = new Workspace();
+                workspace = new Workspace();
             }
 
             workspace.Name = updateDTO.Name;
-            workspace.Owner = owner;
-
+            workspace.Owner = user;
             _workspaceRepository.SaveOrUpdateWorkspace(workspace);
         }
 
-        public IEnumerable<WorkspaceDto> GetWorkspacesByUser(string userName)
+        public void DeleteWorkspace(int workspaceId)
         {
-            var userModel = _userRepository.GetUser(userName);
-            var workspaces = _workspaceRepository.GetWorkspaceByUser(userModel);
-            return _mapper.Map<IEnumerable<WorkspaceDto>>(workspaces);
-        }
-
-        public void DeleteWorkspace(int workspaceId, string userName)
-        {
-            var userModel = _userRepository.GetUser(userName);
-
-            if (_workspaceRepository.WorkspaceExists(workspaceId))
-            {
-                // Check if the user has permission to delete the workspace (if needed)
-                // You might want to implement additional logic based on your requirements
-
-                // Perform the deletion
-                _workspaceRepository.DeleteWorkspace(workspaceId);
-            }
+            Workspace workspace = _workspaceRepository.GetWorkspace(workspaceId);
+            _workspaceRepository.DeleteWorkspace(workspace);
         }
     }
 }

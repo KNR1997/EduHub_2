@@ -6,5 +6,7 @@ namespace TMA.Interfaces
     {
         User GetUser(string username);
 
+        User GetUserByID(string userID);
+
     }
 }

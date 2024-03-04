@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "D:\\Task-Manager-Application\\TMA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\task-manager-application\\tma\\tma\\repository\\workspacerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\repository\\workspacerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\task-manager-application\\tma\\tma\\interfaces\\iworkspacerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\interfaces\\iworkspacerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\task-manager-application\\tma\\tma\\services\\workspaceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\services\\workspaceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\task-manager-application\\tma\\tma\\controllers\\workspacecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\controllers\\workspacecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\task-manager-application\\tma\\tma\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\task-manager-application\\tma\\tma\\dtos\\ticketdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\dtos\\ticketdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,71 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Task-Manager-Application\\TMA\\TMA\\Program.cs",
               "RelativeDocumentMoniker": "TMA\\Program.cs",
               "ToolTip": "D:\\Task-Manager-Application\\TMA\\TMA\\Program.cs",
               "RelativeToolTip": "TMA\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAvAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-04T04:00:41.277Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "WorkspaceController.cs",
-              "DocumentMoniker": "D:\\Task-Manager-Application\\TMA\\TMA\\Controllers\\WorkspaceController.cs",
-              "RelativeDocumentMoniker": "TMA\\Controllers\\WorkspaceController.cs",
-              "ToolTip": "D:\\Task-Manager-Application\\TMA\\TMA\\Controllers\\WorkspaceController.cs",
-              "RelativeToolTip": "TMA\\Controllers\\WorkspaceController.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAA/wCcAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-04T03:51:11.108Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "WorkspaceRepository.cs",
-              "DocumentMoniker": "D:\\Task-Manager-Application\\TMA\\TMA\\Repository\\WorkspaceRepository.cs",
-              "RelativeDocumentMoniker": "TMA\\Repository\\WorkspaceRepository.cs",
-              "ToolTip": "D:\\Task-Manager-Application\\TMA\\TMA\\Repository\\WorkspaceRepository.cs*",
-              "RelativeToolTip": "TMA\\Repository\\WorkspaceRepository.cs*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEcAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-04T03:51:47.53Z",
+              "WhenOpened": "2024-03-04T08:15:46.517Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "IWorkspaceRepository.cs",
-              "DocumentMoniker": "D:\\Task-Manager-Application\\TMA\\TMA\\Interfaces\\IWorkspaceRepository.cs",
-              "RelativeDocumentMoniker": "TMA\\Interfaces\\IWorkspaceRepository.cs",
-              "ToolTip": "D:\\Task-Manager-Application\\TMA\\TMA\\Interfaces\\IWorkspaceRepository.cs",
-              "RelativeToolTip": "TMA\\Interfaces\\IWorkspaceRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAApAAAA",
+              "Title": "TicketDto.cs",
+              "DocumentMoniker": "D:\\Task-Manager-Application\\TMA\\TMA\\Dtos\\TicketDto.cs",
+              "RelativeDocumentMoniker": "TMA\\Dtos\\TicketDto.cs",
+              "ToolTip": "D:\\Task-Manager-Application\\TMA\\TMA\\Dtos\\TicketDto.cs",
+              "RelativeToolTip": "TMA\\Dtos\\TicketDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-04T03:51:29.074Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "WorkspaceService.cs",
-              "DocumentMoniker": "D:\\Task-Manager-Application\\TMA\\TMA\\Services\\WorkspaceService.cs",
-              "RelativeDocumentMoniker": "TMA\\Services\\WorkspaceService.cs",
-              "ToolTip": "D:\\Task-Manager-Application\\TMA\\TMA\\Services\\WorkspaceService.cs",
-              "RelativeToolTip": "TMA\\Services\\WorkspaceService.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAiwBQAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-03T19:25:26.98Z",
+              "WhenOpened": "2024-03-04T08:13:07.867Z",
               "EditorCaption": ""
             }
           ]

@@ -65,10 +65,5 @@ namespace TMA.Repository
         {
             return _context.Workspaces.Any(w => w.Id == workspaceId);
         }
-
-        public bool DeleteWorkspace(int workspaceId)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

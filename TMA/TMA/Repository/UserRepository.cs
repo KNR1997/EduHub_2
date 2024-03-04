@@ -17,7 +17,12 @@ namespace TMA.Repository
         {
             // Query the database to find the user by username
             var user = _context.Users.FirstOrDefault(u => u.UserName == userName);
+            return user;
+        }
 
+        public User GetUserByID(string userID)
+        {
+            var user = _context.Users.FirstOrDefault(u => u.Id == userID);
             return user;
         }
     }

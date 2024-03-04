@@ -11,7 +11,7 @@ namespace TMA.Interfaces
 
         ICollection<Workspace> GetWorkspaceByUser(User user);
 
-        bool DeleteWorkspace(int workspaceId);
+        bool DeleteWorkspace(Workspace workspace);
 
         Workspace GetWorkspace(int id);
 
