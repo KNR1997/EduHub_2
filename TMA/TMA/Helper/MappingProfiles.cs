@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using TMA.Dtos;
+using TMA.Dtos.PageDtos;
 using TMA.Models;
 
 namespace TMA.Helper
@@ -8,7 +9,8 @@ namespace TMA.Helper
     {
         public MappingProfiles() 
         {
-            CreateMap<Workspace, WorkspaceDto>();
+            CreateMap<Student, StudentDto>();
+            CreateMap<Student, StudentPageDto>();
         }
     }
 }

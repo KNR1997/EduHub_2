@@ -19,6 +19,21 @@ namespace TMA.Migrations
                 .HasAnnotation("ProductVersion", "8.0.2")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
+            modelBuilder.Entity("ClassroomTeacher", b =>
+                {
+                    b.Property<int>("ClassroomsId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TeachersId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ClassroomsId", "TeachersId");
+
+                    b.HasIndex("TeachersId");
+
+                    b.ToTable("ClassroomTeacher");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -147,63 +162,116 @@ namespace TMA.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("TMA.Models.Column", b =>
+            modelBuilder.Entity("SubjectTeacher", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("SubjectsId")
                         .HasColumnType("int");
 
-                    b.Property<int>("WorkspaceId")
+                    b.Property<int>("TeachersId")
                         .HasColumnType("int");
 
-                    b.Property<string>("name")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.HasKey("SubjectsId", "TeachersId");
 
-                    b.HasKey("Id");
+                    b.HasIndex("TeachersId");
 
-                    b.HasIndex("WorkspaceId");
-
-                    b.ToTable("Columns");
+                    b.ToTable("SubjectTeacher");
                 });
 
-            modelBuilder.Entity("TMA.Models.Ticket", b =>
+            modelBuilder.Entity("TMA.Models.Classroom", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("ColumnId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Description")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("longtext");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<int>("WorkspaceId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("status")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("userId")
-                        .IsRequired()
-                        .HasColumnType("varchar(255)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ColumnId");
+                    b.ToTable("Classrooms");
+                });
 
-                    b.HasIndex("WorkspaceId");
+            modelBuilder.Entity("TMA.Models.Student", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                    b.HasIndex("userId");
+                    b.Property<int>("Age")
+                        .HasColumnType("int");
 
-                    b.ToTable("Tickets");
+                    b.Property<int?>("ClassroomId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ContactNo")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ContactPerson")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<DateOnly>("Dob")
+                        .HasColumnType("date");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ClassroomId");
+
+                    b.ToTable("Students");
+                });
+
+            modelBuilder.Entity("TMA.Models.Subject", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Subjects");
+                });
+
+            modelBuilder.Entity("TMA.Models.Teacher", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int>("ContactNo")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Teachers");
                 });
 
             modelBuilder.Entity("TMA.Models.User", b =>
@@ -270,47 +338,19 @@ namespace TMA.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
-            modelBuilder.Entity("TMA.Models.UserWorkspace", b =>
+            modelBuilder.Entity("ClassroomTeacher", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                    b.HasOne("TMA.Models.Classroom", null)
+                        .WithMany()
+                        .HasForeignKey("ClassroomsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("varchar(255)");
-
-                    b.Property<int>("WorkspaceId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId");
-
-                    b.HasIndex("WorkspaceId");
-
-                    b.ToTable("UserWorkspaces");
-                });
-
-            modelBuilder.Entity("TMA.Models.Workspace", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("OwnerId")
-                        .IsRequired()
-                        .HasColumnType("varchar(255)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("OwnerId");
-
-                    b.ToTable("Workspaces");
+                    b.HasOne("TMA.Models.Teacher", null)
+                        .WithMany()
+                        .HasForeignKey("TeachersId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -364,84 +404,33 @@ namespace TMA.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("TMA.Models.Column", b =>
+            modelBuilder.Entity("SubjectTeacher", b =>
                 {
-                    b.HasOne("TMA.Models.Workspace", "Workspace")
+                    b.HasOne("TMA.Models.Subject", null)
                         .WithMany()
-                        .HasForeignKey("WorkspaceId")
+                        .HasForeignKey("SubjectsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Workspace");
-                });
-
-            modelBuilder.Entity("TMA.Models.Ticket", b =>
-                {
-                    b.HasOne("TMA.Models.Column", "Column")
+                    b.HasOne("TMA.Models.Teacher", null)
                         .WithMany()
-                        .HasForeignKey("ColumnId")
+                        .HasForeignKey("TeachersId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("TMA.Models.Workspace", "Workspace")
-                        .WithMany()
-                        .HasForeignKey("WorkspaceId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("TMA.Models.User", "user")
-                        .WithMany("Tickets")
-                        .HasForeignKey("userId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Column");
-
-                    b.Navigation("Workspace");
-
-                    b.Navigation("user");
                 });
 
-            modelBuilder.Entity("TMA.Models.UserWorkspace", b =>
+            modelBuilder.Entity("TMA.Models.Student", b =>
                 {
-                    b.HasOne("TMA.Models.User", "User")
-                        .WithMany("UserWorkspaces")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasOne("TMA.Models.Classroom", "Classroom")
+                        .WithMany("Students")
+                        .HasForeignKey("ClassroomId");
 
-                    b.HasOne("TMA.Models.Workspace", "Workspace")
-                        .WithMany("UserWorkspaces")
-                        .HasForeignKey("WorkspaceId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
-
-                    b.Navigation("Workspace");
+                    b.Navigation("Classroom");
                 });
 
-            modelBuilder.Entity("TMA.Models.Workspace", b =>
+            modelBuilder.Entity("TMA.Models.Classroom", b =>
                 {
-                    b.HasOne("TMA.Models.User", "Owner")
-                        .WithMany()
-                        .HasForeignKey("OwnerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Owner");
-                });
-
-            modelBuilder.Entity("TMA.Models.User", b =>
-                {
-                    b.Navigation("Tickets");
-
-                    b.Navigation("UserWorkspaces");
-                });
-
-            modelBuilder.Entity("TMA.Models.Workspace", b =>
-                {
-                    b.Navigation("UserWorkspaces");
+                    b.Navigation("Students");
                 });
 #pragma warning restore 612, 618
         }
