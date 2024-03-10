@@ -1,4 +1,5 @@
-﻿using TMA.Dtos;
+﻿using AutoMapper;
+using TMA.Dtos;
 using TMA.Interfaces;
 using TMA.Models;
 
@@ -7,10 +8,21 @@ namespace TMA.Services
     public class TeacherService
     {
         private readonly ITeacherRepository _teacherRepository;
+        private readonly IMapper _mapper;
 
-        public TeacherService(ITeacherRepository teacherRepository)
+
+        public TeacherService(ITeacherRepository teacherRepository, IMapper mapper)
         {
             _teacherRepository = teacherRepository;
+            _mapper = mapper;
+        }
+
+        public List<TeacherDto> GetAllTeachers()
+        {
+            List<Teacher> teachers = _teacherRepository.GetAll();
+            List<TeacherDto> teacherDtos = _mapper.Map<List<TeacherDto>>(teachers);
+
+            return teacherDtos;
         }
 
         public void SaveOrUpdateTeacher(TeacherDto updateDTO)
@@ -40,6 +52,5 @@ namespace TMA.Services
             Teacher teacher = _teacherRepository.GetTeacherById(teacherId);
             _teacherRepository.DeleteTeacher(teacher);
         }
-
     }
 }

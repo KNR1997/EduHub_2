@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using TMA.Dtos;
 using TMA.Interfaces;
 using TMA.Models;
@@ -8,10 +9,20 @@ namespace TMA.Services
     public class ClassroomService
     {
         private readonly IClassroomRepository _classroomRepository;
+        private readonly IMapper _mapper;
 
-        public ClassroomService(IClassroomRepository classroomRepository) 
+        public ClassroomService(IClassroomRepository classroomRepository, IMapper mapper) 
         {
             _classroomRepository = classroomRepository;
+            _mapper = mapper;
+        }
+
+        public List<ClassroomDto> GetAllClassrooms()
+        {
+            List<Classroom> classrooms = _classroomRepository.GetAll();
+            List<ClassroomDto> classroomDtos = _mapper.Map<List<ClassroomDto>>(classrooms);
+
+            return classroomDtos;
         }
 
         public void SaveOrUpdateClassroom(ClassroomDto updateDTO)

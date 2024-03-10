@@ -15,6 +15,17 @@ namespace TMA.Controllers
             _teacherService = teacherService;
         }
 
+        [HttpGet]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        public ActionResult<List<TeacherDto>> GetAllTeachers()
+        {
+
+            List<TeacherDto> teacherDtos = _teacherService.GetAllTeachers();
+
+            return Ok(teacherDtos);
+        }
+
         [HttpPost]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]

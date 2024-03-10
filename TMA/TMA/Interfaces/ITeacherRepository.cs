@@ -4,6 +4,8 @@ namespace TMA.Interfaces
 {
     public interface ITeacherRepository
     {
+        List<Teacher> GetAll();
+
         bool SaveOrUpdateTeacher(Teacher teacher);
 
         Teacher GetTeacherById(int id);

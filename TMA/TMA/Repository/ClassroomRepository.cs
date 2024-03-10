@@ -14,6 +14,11 @@ namespace TMA.Repository
             _context = context;
         }
 
+        public List<Classroom> GetAll()
+        {
+            return _context.Classrooms.ToList();
+        }
+
         public bool SaveOrUpdateClassroom(Classroom classroom)
         {
             if (classroom.Id == 0)

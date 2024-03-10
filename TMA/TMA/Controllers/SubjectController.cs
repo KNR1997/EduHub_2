@@ -15,6 +15,17 @@ namespace TMA.Controllers
             _subjectService = subjectService;
         }
 
+        [HttpGet]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        public ActionResult<List<SubjectDto>> GetAllSubjects()
+        {
+
+            List<SubjectDto> subjectDtos = _subjectService.GetAllSubjects();
+
+            return Ok(subjectDtos);
+        }
+
         [HttpPost]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]

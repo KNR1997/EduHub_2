@@ -11,6 +11,9 @@ namespace TMA.Helper
         {
             CreateMap<Student, StudentDto>();
             CreateMap<Student, StudentPageDto>();
+            CreateMap<Classroom, ClassroomDto>();
+            CreateMap<Teacher, TeacherDto>();
+            CreateMap<Subject, SubjectDto>();
         }
     }
 }

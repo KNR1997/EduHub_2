@@ -14,6 +14,11 @@ namespace TMA.Repository
             _context = context;
         }
 
+        public List<Teacher> GetAll()
+        {
+            return _context.Teachers.ToList();
+        }
+
         public bool SaveOrUpdateTeacher(Teacher teacher)
         {
             if (teacher.Id == 0)

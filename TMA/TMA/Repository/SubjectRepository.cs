@@ -13,6 +13,11 @@ namespace TMA.Repository
             _context = context;
         }
 
+        public List<Subject> GetAll()
+        {
+            return _context.Subjects.ToList();
+        }
+
         public bool SaveOrUpdateSubject(Subject subject)
         {
             if (subject.Id == 0)

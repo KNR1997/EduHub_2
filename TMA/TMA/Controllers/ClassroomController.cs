@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TMA.Dtos;
+using TMA.Dtos.PageDtos;
 using TMA.Repository;
 using TMA.Services;
 
@@ -15,6 +16,17 @@ namespace TMA.Controllers
         public ClassroomController(ClassroomService classroomService) 
         {
             _classroomService = classroomService;
+        }
+
+        [HttpGet]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        public ActionResult<List<ClassroomDto>> GetAllClassrooms()
+        {
+
+            List<ClassroomDto> classroomDtos = _classroomService.GetAllClassrooms();
+
+            return Ok(classroomDtos);
         }
 
         [HttpPost]

@@ -4,6 +4,8 @@ namespace TMA.Interfaces
 {
     public interface IClassroomRepository
     {
+        List<Classroom> GetAll();
+
         bool SaveOrUpdateClassroom(Classroom classroom);
 
         Classroom GetClassroomById(int id);

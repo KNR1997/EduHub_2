@@ -3,60 +3,16 @@
   "WorkspaceRootPath": "D:\\EduHub_2\\TMA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\eduhub_2\\tma\\tma\\models\\classroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\models\\classroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\eduhub_2\\tma\\tma\\models\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\models\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\eduhub_2\\tma\\tma\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\models\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\eduhub_2\\tma\\tma\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\eduhub_2\\tma\\tma\\services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\services\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\eduhub_2\\tma\\tma\\dtos\\studentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\dtos\\studentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\eduhub_2\\tma\\tma\\repository\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\repository\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\eduhub_2\\tma\\tma\\interfaces\\istudentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\interfaces\\istudentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\eduhub_2\\tma\\tma\\helper\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\helper\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\eduhub_2\\tma\\tma\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\eduhub_2\\tma\\tma\\dtos\\pagedtos\\studentpagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\dtos\\pagedtos\\studentpagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\eduhub_2\\tma\\tma\\dtos\\subjectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\dtos\\subjectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\eduhub_2\\tma\\tma\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\eduhub_2\\tma\\tma\\services\\classroomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\services\\classroomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\eduhub_2\\tma\\tma\\dtos\\studentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\dtos\\studentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,188 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Classroom.cs",
-              "DocumentMoniker": "D:\\EduHub_2\\TMA\\TMA\\Models\\Classroom.cs",
-              "RelativeDocumentMoniker": "TMA\\Models\\Classroom.cs",
-              "ToolTip": "D:\\EduHub_2\\TMA\\TMA\\Models\\Classroom.cs",
-              "RelativeToolTip": "TMA\\Models\\Classroom.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-09T21:29:54.218Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Teacher.cs",
-              "DocumentMoniker": "D:\\EduHub_2\\TMA\\TMA\\Models\\Teacher.cs",
-              "RelativeDocumentMoniker": "TMA\\Models\\Teacher.cs",
-              "ToolTip": "D:\\EduHub_2\\TMA\\TMA\\Models\\Teacher.cs",
-              "RelativeToolTip": "TMA\\Models\\Teacher.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-09T21:29:46.344Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Subject.cs",
-              "DocumentMoniker": "D:\\EduHub_2\\TMA\\TMA\\Models\\Subject.cs",
-              "RelativeDocumentMoniker": "TMA\\Models\\Subject.cs",
-              "ToolTip": "D:\\EduHub_2\\TMA\\TMA\\Models\\Subject.cs",
-              "RelativeToolTip": "TMA\\Models\\Subject.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-09T21:29:42.745Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "SubjectDto.cs",
-              "DocumentMoniker": "D:\\EduHub_2\\TMA\\TMA\\Dtos\\SubjectDto.cs",
-              "RelativeDocumentMoniker": "TMA\\Dtos\\SubjectDto.cs",
-              "ToolTip": "D:\\EduHub_2\\TMA\\TMA\\Dtos\\SubjectDto.cs",
-              "RelativeToolTip": "TMA\\Dtos\\SubjectDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-09T21:05:45.386Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "StudentPageDto.cs",
-              "DocumentMoniker": "D:\\EduHub_2\\TMA\\TMA\\Dtos\\PageDtos\\StudentPageDto.cs",
-              "RelativeDocumentMoniker": "TMA\\Dtos\\PageDtos\\StudentPageDto.cs",
-              "ToolTip": "D:\\EduHub_2\\TMA\\TMA\\Dtos\\PageDtos\\StudentPageDto.cs",
-              "RelativeToolTip": "TMA\\Dtos\\PageDtos\\StudentPageDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-09T21:05:43.376Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "StudentDto.cs",
-              "DocumentMoniker": "D:\\EduHub_2\\TMA\\TMA\\Dtos\\StudentDto.cs",
-              "RelativeDocumentMoniker": "TMA\\Dtos\\StudentDto.cs",
-              "ToolTip": "D:\\EduHub_2\\TMA\\TMA\\Dtos\\StudentDto.cs",
-              "RelativeToolTip": "TMA\\Dtos\\StudentDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA8AAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-09T21:02:37.435Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Student.cs",
-              "DocumentMoniker": "D:\\EduHub_2\\TMA\\TMA\\Models\\Student.cs",
-              "RelativeDocumentMoniker": "TMA\\Models\\Student.cs",
-              "ToolTip": "D:\\EduHub_2\\TMA\\TMA\\Models\\Student.cs",
-              "RelativeToolTip": "TMA\\Models\\Student.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA0AAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-09T21:02:50.839Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ClassroomService.cs",
-              "DocumentMoniker": "D:\\EduHub_2\\TMA\\TMA\\Services\\ClassroomService.cs",
-              "RelativeDocumentMoniker": "TMA\\Services\\ClassroomService.cs",
-              "ToolTip": "D:\\EduHub_2\\TMA\\TMA\\Services\\ClassroomService.cs",
-              "RelativeToolTip": "TMA\\Services\\ClassroomService.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-09T20:42:56.042Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MappingProfiles.cs",
-              "DocumentMoniker": "D:\\EduHub_2\\TMA\\TMA\\Helper\\MappingProfiles.cs",
-              "RelativeDocumentMoniker": "TMA\\Helper\\MappingProfiles.cs",
-              "ToolTip": "D:\\EduHub_2\\TMA\\TMA\\Helper\\MappingProfiles.cs",
-              "RelativeToolTip": "TMA\\Helper\\MappingProfiles.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-09T20:31:35.213Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "StudentRepository.cs",
-              "DocumentMoniker": "D:\\EduHub_2\\TMA\\TMA\\Repository\\StudentRepository.cs",
-              "RelativeDocumentMoniker": "TMA\\Repository\\StudentRepository.cs",
-              "ToolTip": "D:\\EduHub_2\\TMA\\TMA\\Repository\\StudentRepository.cs",
-              "RelativeToolTip": "TMA\\Repository\\StudentRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-09T20:27:29.505Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IStudentRepository.cs",
-              "DocumentMoniker": "D:\\EduHub_2\\TMA\\TMA\\Interfaces\\IStudentRepository.cs",
-              "RelativeDocumentMoniker": "TMA\\Interfaces\\IStudentRepository.cs",
-              "ToolTip": "D:\\EduHub_2\\TMA\\TMA\\Interfaces\\IStudentRepository.cs",
-              "RelativeToolTip": "TMA\\Interfaces\\IStudentRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAYAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-09T20:27:05.427Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "StudentService.cs",
-              "DocumentMoniker": "D:\\EduHub_2\\TMA\\TMA\\Services\\StudentService.cs",
-              "RelativeDocumentMoniker": "TMA\\Services\\StudentService.cs",
-              "ToolTip": "D:\\EduHub_2\\TMA\\TMA\\Services\\StudentService.cs",
-              "RelativeToolTip": "TMA\\Services\\StudentService.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAADwvzEAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-09T20:25:09.493Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
               "Title": "StudentController.cs",
               "DocumentMoniker": "D:\\EduHub_2\\TMA\\TMA\\Controllers\\StudentController.cs",
               "RelativeDocumentMoniker": "TMA\\Controllers\\StudentController.cs",
               "ToolTip": "D:\\EduHub_2\\TMA\\TMA\\Controllers\\StudentController.cs",
               "RelativeToolTip": "TMA\\Controllers\\StudentController.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAAABsAAAAnAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAywCYAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-09T20:23:30.988Z",
+              "WhenOpened": "2024-03-10T10:28:24.217Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\EduHub_2\\TMA\\TMA\\Program.cs",
-              "RelativeDocumentMoniker": "TMA\\Program.cs",
-              "ToolTip": "D:\\EduHub_2\\TMA\\TMA\\Program.cs",
-              "RelativeToolTip": "TMA\\Program.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAAEQAAAAWAAAA",
+              "DocumentIndex": 2,
+              "Title": "StudentDto.cs",
+              "DocumentMoniker": "D:\\EduHub_2\\TMA\\TMA\\Dtos\\StudentDto.cs",
+              "RelativeDocumentMoniker": "TMA\\Dtos\\StudentDto.cs",
+              "ToolTip": "D:\\EduHub_2\\TMA\\TMA\\Dtos\\StudentDto.cs",
+              "RelativeToolTip": "TMA\\Dtos\\StudentDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-09T20:22:17.594Z",
+              "WhenOpened": "2024-03-10T09:25:51.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StudentService.cs",
+              "DocumentMoniker": "D:\\EduHub_2\\TMA\\TMA\\Services\\StudentService.cs",
+              "RelativeDocumentMoniker": "TMA\\Services\\StudentService.cs",
+              "ToolTip": "D:\\EduHub_2\\TMA\\TMA\\Services\\StudentService.cs",
+              "RelativeToolTip": "TMA\\Services\\StudentService.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAYwC0AAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-10T08:53:14.301Z",
               "EditorCaption": ""
             }
           ]

@@ -11,7 +11,6 @@ namespace TMA.Dtos
         public required int ContactNo { get; set; }
         public required string Email { get; set; }
         public required DateTime Dob { get; set; }
-        public required int Age { get; set; }
         public required int ClassroomId { get; set; }
         public required string ClassroomName { get; set; }
     }

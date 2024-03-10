@@ -201,8 +201,12 @@ namespace TMA.Migrations
                     b.Property<int>("Age")
                         .HasColumnType("int");
 
-                    b.Property<int?>("ClassroomId")
+                    b.Property<int>("ClassroomId")
                         .HasColumnType("int");
+
+                    b.Property<string>("ClassroomName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
                     b.Property<int>("ContactNo")
                         .HasColumnType("int");
@@ -211,8 +215,8 @@ namespace TMA.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<DateOnly>("Dob")
-                        .HasColumnType("date");
+                    b.Property<DateTime>("Dob")
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -240,7 +244,6 @@ namespace TMA.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.HasKey("Id");
@@ -254,19 +257,16 @@ namespace TMA.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("ContactNo")
+                    b.Property<int?>("ContactNo")
                         .HasColumnType("int");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("FirstName")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("LastName")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.HasKey("Id");
@@ -423,7 +423,9 @@ namespace TMA.Migrations
                 {
                     b.HasOne("TMA.Models.Classroom", "Classroom")
                         .WithMany("Students")
-                        .HasForeignKey("ClassroomId");
+                        .HasForeignKey("ClassroomId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Classroom");
                 });

@@ -1,4 +1,5 @@
-﻿using TMA.Dtos;
+﻿using AutoMapper;
+using TMA.Dtos;
 using TMA.Interfaces;
 using TMA.Models;
 
@@ -7,12 +8,20 @@ namespace TMA.Services
     public class SubjectService
     {
         private readonly ISubjectRepository _subjectRepository;
-        private readonly ITeacherRepository _teacherRepository;
+        private readonly IMapper _mapper;
 
-        public SubjectService(ISubjectRepository subjectRepository, ITeacherRepository teacherRepository)
+        public SubjectService(ISubjectRepository subjectRepository, IMapper mapper)
         {
             _subjectRepository = subjectRepository;
-            _teacherRepository = teacherRepository;
+            _mapper = mapper;
+        }
+
+        public List<SubjectDto> GetAllSubjects()
+        {
+            List<Subject> subjects = _subjectRepository.GetAll();
+            List<SubjectDto> subjectDtos = _mapper.Map<List<SubjectDto>>(subjects);
+
+            return subjectDtos;
         }
 
         public void SaveOrUpdateSubject(SubjectDto updateDTO)
