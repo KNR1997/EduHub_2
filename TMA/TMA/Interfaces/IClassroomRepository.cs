@@ -10,6 +10,8 @@ namespace TMA.Interfaces
 
         Classroom GetClassroomById(int id);
 
+        Classroom GetClassroomByName(string name);
+
         bool ClassroomExists(int classroomId);
 
         bool DeleteClassroom(Classroom classroom);

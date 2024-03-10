@@ -14,26 +14,102 @@ import {
   QueryClientProvider,
 } from "@tanstack/react-query";
 import Students from "./pages/students/Students";
-
-
+import { createTheme, ThemeProvider, Theme, useTheme } from '@mui/material/styles';
 const queryClient = new QueryClient();
 
+const customTheme = (outerTheme: Theme) =>
+  createTheme({
+    palette: {
+      mode: outerTheme.palette.mode,
+    },
+    components: {
+      MuiTextField: {
+        styleOverrides: {
+          root: {
+            '--TextField-brandBorderColor': '#bf6fc9',
+            '--TextField-brandBorderHoverColor': '#bf6fc9',
+            '--TextField-brandBorderFocusedColor': '#6F7E8C',
+            '& label.Mui-focused': {
+              color: 'var(--TextField-brandBorderFocusedColor)',
+            },
+          },
+        },
+      },
+      MuiFormLabel: {
+        styleOverrides: {
+          root: {
+            'color': '#white'
+          },
+        },
+      },
+      // MuiOutlinedInput: {
+      //   styleOverrides: {
+      //     notchedOutline: {
+      //       borderColor: 'var(--TextField-brandBorderColor)',
+      //     },
+      //     root: {
+      //       [`&:hover .${outlinedInputClasses.notchedOutline}`]: {
+      //         borderColor: 'var(--TextField-brandBorderHoverColor)',
+      //       },
+      //       [`&.Mui-focused .${outlinedInputClasses.notchedOutline}`]: {
+      //         borderColor: 'var(--TextField-brandBorderFocusedColor)',
+      //       },
+      //     },
+      //   },
+      // },
+      // MuiFilledInput: {
+      //   styleOverrides: {
+      //     root: {
+      //       '&::before, &::after': {
+      //         borderBottom: '2px solid var(--TextField-brandBorderColor)',
+      //       },
+      //       '&:hover:not(.Mui-disabled, .Mui-error):before': {
+      //         borderBottom: '2px solid var(--TextField-brandBorderHoverColor)',
+      //       },
+      //       '&.Mui-focused:after': {
+      //         borderBottom: '2px solid var(--TextField-brandBorderFocusedColor)',
+      //       },
+      //     },
+      //   },
+      // },
+      // MuiInput: {
+      //   styleOverrides: {
+      //     root: {
+      //       '&::before': {
+      //         borderBottom: '2px solid var(--TextField-brandBorderColor)',
+      //       },
+      //       '&:hover:not(.Mui-disabled, .Mui-error):before': {
+      //         borderBottom: '2px solid var(--TextField-brandBorderHoverColor)',
+      //       },
+      //       '&.Mui-focused:after': {
+      //         borderBottom: '2px solid var(--TextField-brandBorderFocusedColor)',
+      //       },
+      //     },
+      //   },
+      // },
+    },
+  });
+  
 function App() {
   const Layout = () => {
+    const outerTheme = useTheme();
+    
     return (
       <div className="main">
-        <Navbar />
-        <div className="container">
-          <div className="menuContainer">
-            <Menu />
+        <ThemeProvider theme={customTheme(outerTheme)}>
+          <Navbar />
+          <div className="container">
+            <div className="menuContainer">
+              <Menu />
+            </div>
+            <div className="contentContainer">
+              <QueryClientProvider client={queryClient}>
+                <Outlet />
+              </QueryClientProvider>
+            </div>
           </div>
-          <div className="contentContainer">
-            <QueryClientProvider client={queryClient}>
-              <Outlet />
-            </QueryClientProvider>
-          </div>
-        </div>
-        <Footer />
+          <Footer />
+        </ThemeProvider>
       </div>
     );
   };

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using TMA.Dtos;
+using TMA.Dtos.FormDtos;
 using TMA.Dtos.PageDtos;
 using TMA.Interfaces;
 using TMA.Models;
@@ -29,7 +30,7 @@ namespace TMA.Services
             return studentPageDtos;
         }
 
-        public void SaveOrUpdateStudent(StudentDto updateDTO)
+        public void SaveOrUpdateStudent(StudentFormDto updateDTO)
         {
             Student student;
             bool isNew = (updateDTO.Id == 0);
@@ -50,7 +51,7 @@ namespace TMA.Services
             student.ContactNo = updateDTO.ContactNo;
             student.Dob = updateDTO.Dob;
             student.ClassroomName = updateDTO.ClassroomName;
-            student.Classroom = _classroomRepository.GetClassroomById(updateDTO.ClassroomId);
+            student.Classroom = _classroomRepository.GetClassroomByName(updateDTO.ClassroomName);
 
             // Calculate age
             DateTime currentDate = DateTime.UtcNow;

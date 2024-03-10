@@ -41,6 +41,14 @@ namespace TMA.Repository
                     .FirstOrDefault();
         }
 
+        public Classroom GetClassroomByName(string name)
+        {
+            return _context.Classrooms
+                    .Include(c => c.Teachers)
+                    .Where(w => w.Name == name)
+                    .FirstOrDefault();
+        }
+
         public bool ClassroomExists(int classroomId)
         {
             return _context.Classrooms.Any(w => w.Id == classroomId);

@@ -5,6 +5,7 @@ import Add from "../../components/add/Add";
 import { GridColDef } from "@mui/x-data-grid";
 import { products } from "../../data";
 import { useQuery } from "@tanstack/react-query";
+import StudentAddEdit from "./StudentAddEdit";
 
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 90 },
@@ -44,6 +45,18 @@ const columns: GridColDef[] = [
     headerName: "Birthday",
     width: 100,
   },
+  {
+    field: "age",
+    type: "string",
+    headerName: "Age",
+    width: 100,
+  },
+  {
+    field: "classroomName",
+    type: "string",
+    headerName: "Classroom",
+    width: 100,
+  },
 ];
 
 const Students = () => {
@@ -75,7 +88,7 @@ const Students = () => {
       ) : (
         <DataTable slug="products" columns={columns} rows={data} />
       )}
-      {open && <Add slug="student" columns={columns} setOpen={setOpen} />}
+      {open && <StudentAddEdit slug="student" columns={columns} setOpen={setOpen} />}
     </div>
   );
 };

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TMA.Dtos;
+using TMA.Dtos.FormDtos;
 using TMA.Dtos.PageDtos;
 using TMA.Models;
 using TMA.Services;
@@ -31,12 +32,12 @@ namespace TMA.Controllers
         [HttpPost]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
-        public IActionResult SaveOrUpdateStudent([FromBody] StudentDto studentDto)
+        public IActionResult SaveOrUpdateStudent([FromBody] StudentFormDto studentFormDto)
         {
-            if (studentDto == null)
+            if (studentFormDto == null)
                 return BadRequest(ModelState);
 
-            _studentService.SaveOrUpdateStudent(studentDto);
+            _studentService.SaveOrUpdateStudent(studentFormDto);
 
             return Ok("Successfully created");
         }
