@@ -13,3 +13,16 @@ export type ClassInterface = {
     id: number
     name: string;
 };
+
+export type TeacherInterface = {
+    id: number
+    firstName: string;
+    lastName: string;
+    email: string;
+    contactNo: string;
+};
+
+export type SubjectInterface = {
+    id: number
+    name: string;
+};

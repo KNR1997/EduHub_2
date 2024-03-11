@@ -4,7 +4,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { TextField } from "@mui/material";
 import { useFormik } from "formik";
 import * as yup from "yup";
-import { ClassInterface } from "../../interfaces/Entity.type";
+import { SubjectInterface } from "../../interfaces/Entity.type";
 import { commonMutation } from "./api";
 
 type Props = {
@@ -12,17 +12,18 @@ type Props = {
   columns: GridColDef[];
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
   addOrEdit: "add" | "edit";
-  data: ClassInterface;
+  data: SubjectInterface;
 };
 
-const ClassroomAddEdit = (props: Props) => {
-  // API Call for Classroom Add/Edit
+const SubjectAddEdit = (props: Props) => {
+
+  // API Call for Subject Add/Edit
   const queryClient = useQueryClient();
 
   const mutation = useMutation({
-    mutationFn: async (formData: ClassInterface) => {
+    mutationFn: async (formData: SubjectInterface) => {
       return commonMutation(
-        `https://localhost:7099/Classroom`,
+        `https://localhost:7099/Subject`,
         formData,
         props.addOrEdit === "edit"
       );
@@ -66,7 +67,7 @@ const ClassroomAddEdit = (props: Props) => {
             id="name"
             margin="normal"
             name="name"
-            label="ClassName"
+            label="Subject"
             variant="outlined"
             value={formik.values.name}
             onChange={formik.handleChange}
@@ -81,4 +82,4 @@ const ClassroomAddEdit = (props: Props) => {
   );
 };
 
-export default ClassroomAddEdit;
+export default SubjectAddEdit;

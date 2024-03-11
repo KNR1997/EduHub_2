@@ -2,64 +2,64 @@ import { useState } from "react";
 import "./page.scss";
 import DataTable from "../../components/dataTable/DataTable";
 import { useQuery } from "@tanstack/react-query";
-import StudentAddEdit from "./StudentAddEdit";
-import { StudentInterface } from "../../interfaces/Entity.type";
+import SubjectAddEdit from "./Subject.AddEdit";
+import { SubjectInterface } from "../../interfaces/Entity.type";
 import { columns } from "./columns";
 
-const Students = () => {
+export const Subjects = () => {
   const [open, setOpen] = useState(false);
   const [addEdit, setAddEdit] = useState<"add" | "edit">("add");
-  const [Student, setStudent] = useState<StudentInterface>(
-    {} as StudentInterface
+  const [editData, setEditData] = useState<SubjectInterface>(
+    {} as SubjectInterface
   );
 
   // TEST THE API
   const { isLoading, data } = useQuery({
     queryKey: ["allStudents"],
     queryFn: () =>
-      fetch("https://localhost:7099/Student").then((res) => res.json()),
+      fetch("https://localhost:7099/Subject").then((res) => res.json()),
   });
 
-  const editStudent = (data: StudentInterface) => {
+  const editClassroom = (data: SubjectInterface) => {
     setOpen(true);
     setAddEdit("edit");
-    setStudent(data);
+    setEditData(data);
   };
 
-  const addStudent = () => {
+  const addClassroom = () => {
     setOpen(true);
     setAddEdit("add");
-    setStudent({} as StudentInterface);
+    setEditData({} as SubjectInterface);
   };
 
   return (
     <div className="products">
       <div className="info">
-        <h1>Students</h1>
-        <button onClick={addStudent}>Add New Student</button>
+        <h1>Subjects</h1>
+        <button onClick={addClassroom}>Add New Subject</button>
       </div>
 
       {isLoading ? (
         "Loading..."
       ) : (
         <DataTable
-          slug="Student"
+          slug="Subject"
           columns={columns}
           rows={data}
-          editRow={editStudent}
+          editRow={editClassroom}
         />
       )}
       {open && (
-        <StudentAddEdit
-          slug="Student"
+        <SubjectAddEdit
+          slug="Subject"
           columns={columns}
           setOpen={setOpen}
           addOrEdit={addEdit}
-          data={Student}
+          data={editData}
         />
       )}
     </div>
   );
 };
 
-export default Students;
+export default Subjects;

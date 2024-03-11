@@ -1,12 +1,12 @@
 import { useState } from "react";
-import "./classrooms.scss";
+import "./page.scss";
 import DataTable from "../../components/dataTable/DataTable";
 import { useQuery } from "@tanstack/react-query";
 import ClassroomAddEdit from "./ClassroomAddEdit";
 import { ClassInterface } from "../../interfaces/Entity.type";
-import { columns } from "./classroom.columns";
+import { columns } from "./columns";
 
-const Classrooms = () => {
+export const Classrooms = () => {
   const [open, setOpen] = useState(false);
   const [addEdit, setAddEdit] = useState<"add" | "edit">("add");
   const [classroom, setClassroom] = useState<ClassInterface>(
