@@ -1,94 +1,63 @@
 import { useState } from "react";
 import "./students.scss";
 import DataTable from "../../components/dataTable/DataTable";
-import Add from "../../components/add/Add";
-import { GridColDef } from "@mui/x-data-grid";
-import { products } from "../../data";
 import { useQuery } from "@tanstack/react-query";
 import StudentAddEdit from "./StudentAddEdit";
-
-const columns: GridColDef[] = [
-  { field: "id", headerName: "ID", width: 90 },
-  {
-    field: "firstName",
-    type: "string",
-    headerName: "FirstName",
-    width: 100,
-  },
-  {
-    field: "lastName",
-    type: "string",
-    headerName: "LastName",
-    width: 100,
-  },
-  {
-    field: "contactPerson",
-    type: "string",
-    headerName: "ContactPerson",
-    width: 200,
-  },
-  {
-    field: "contactNo",
-    type: "string",
-    headerName: "ContactNo",
-    width: 200,
-  },
-  {
-    field: "email",
-    type: "string",
-    headerName: "Email",
-    width: 250,
-  },
-  {
-    field: "inStock",
-    type: "date",
-    headerName: "Birthday",
-    width: 100,
-  },
-  {
-    field: "age",
-    type: "string",
-    headerName: "Age",
-    width: 100,
-  },
-  {
-    field: "classroomName",
-    type: "string",
-    headerName: "Classroom",
-    width: 100,
-  },
-];
+import { StudentInterface } from "../../interfaces/Entity.type";
+import { columns } from "./student.columns";
 
 const Students = () => {
   const [open, setOpen] = useState(false);
+  const [addEdit, setAddEdit] = useState<"add" | "edit">("add");
+  const [Student, setStudent] = useState<StudentInterface>(
+    {} as StudentInterface
+  );
 
   // TEST THE API
-
   const { isLoading, data } = useQuery({
     queryKey: ["allStudents"],
     queryFn: () =>
-      fetch("https://localhost:7099/Student").then(
-        (res) => res.json()
-      ),
+      fetch("https://localhost:7099/Student").then((res) => res.json()),
   });
 
-  console.log('students: ', data)
+  const editStudent = (data: StudentInterface) => {
+    setOpen(true);
+    setAddEdit("edit");
+    setStudent(data);
+  };
+
+  const addStudent = () => {
+    setOpen(true);
+    setAddEdit("add");
+    setStudent({} as StudentInterface);
+  };
 
   return (
     <div className="products">
       <div className="info">
         <h1>Students</h1>
-        <button onClick={() => setOpen(true)}>Add New Student</button>
+        <button onClick={addStudent}>Add New Student</button>
       </div>
-      {/* <DataTable slug="products" columns={columns} rows={products} /> */}
-      {/* TEST THE API */}
 
       {isLoading ? (
         "Loading..."
       ) : (
-        <DataTable slug="products" columns={columns} rows={data} />
+        <DataTable
+          slug="Student"
+          columns={columns}
+          rows={data}
+          editRow={editStudent}
+        />
       )}
-      {open && <StudentAddEdit slug="student" columns={columns} setOpen={setOpen} />}
+      {open && (
+        <StudentAddEdit
+          slug="Student"
+          columns={columns}
+          setOpen={setOpen}
+          addOrEdit={addEdit}
+          data={Student}
+        />
+      )}
     </div>
   );
 };

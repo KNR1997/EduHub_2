@@ -48,7 +48,7 @@ namespace TMA.Services
 
                 student.FirstName = updateDTO.FirstName;
                 student.LastName = updateDTO.LastName;
-                student.Email = updateDTO.ContactPerson;
+                student.Email = updateDTO.Email;
                 student.ContactPerson = updateDTO.ContactPerson;
                 student.ContactNo = updateDTO.ContactNo;
                 student.Dob = updateDTO.Dob;
@@ -83,10 +83,21 @@ namespace TMA.Services
             }
         }
 
-        public void DeleteClassroom(int studentId)
+        public void DeleteStudent(int studentId)
         {
-            Student student = _studentRepository.GetStudentById(studentId);
-            _studentRepository.DeleteStudent(student);
+            try
+            {
+                Student student = _studentRepository.GetStudentById(studentId);
+                _studentRepository.DeleteStudent(student);
+            }
+            catch (Exception ex)
+            {
+                // Log the exception (replace with your logging mechanism)
+                Console.WriteLine($"Error in DeleteStudent: {ex.Message}");
+
+                // Optionally rethrow the exception to propagate it further
+                throw;
+            }
         }
 
         public StudentReportDto GetStudentReport(int studentId)

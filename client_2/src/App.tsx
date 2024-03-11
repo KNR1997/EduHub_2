@@ -90,6 +90,15 @@ const customTheme = (outerTheme: Theme) =>
           },
         },
       },
+      MuiInputBase: {
+        styleOverrides: {
+          root: {
+            '&': {
+              color: '#fff',
+            }
+          },
+        },
+      },
     },
   });
   

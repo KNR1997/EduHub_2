@@ -29,7 +29,7 @@ namespace TMA.Controllers
             return Ok(studentPageDtos);
         }
 
-        [HttpPost]
+        [HttpPost, HttpPut]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
         public IActionResult SaveOrUpdateStudent([FromBody] StudentFormDto studentFormDto)
@@ -48,7 +48,7 @@ namespace TMA.Controllers
         [ProducesResponseType(404)]
         public IActionResult DeleteStudent(int studentId)
         {
-            _studentService.DeleteClassroom(studentId);
+            _studentService.DeleteStudent(studentId);
             return Ok("Successfully deleted");
         }
 

@@ -1,54 +1,41 @@
 import { GridColDef } from "@mui/x-data-grid";
 import "./studentAddEdit.scss";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { TextField } from "@mui/material";
 import MenuItem from "@mui/material/MenuItem";
 import { useFormik } from "formik";
 import * as yup from "yup";
+import { StudentInterface, ClassInterface } from "../../interfaces/Entity.type";
+import { commonMutation } from "./api";
 
 type Props = {
   slug: string;
   columns: GridColDef[];
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  addOrEdit: "add" | "edit";
+  data: StudentInterface;
 };
 
 const StudentAddEdit = (props: Props) => {
-  const currencies = [
-    {
-      value: "5-A",
-      label: "5-A",
-    },
-    {
-      value: "5-B",
-      label: "5-B",
-    },
-    {
-      value: "5-C",
-      label: "5-C",
-    },
-  ];
+  // Fetch all classes
+  const { data: classes } = useQuery(["allClasses"], async () => {
+    const response = await fetch("https://localhost:7099/Classroom");
+    if (!response.ok) {
+      throw new Error("Failed to fetch classes");
+    }
+    return response.json();
+  });
 
-  // TEST THE API
+  // API Call for Student Add/Edit
   const queryClient = useQueryClient();
 
   const mutation = useMutation({
-    mutationFn: async (formData: {
-      firstName: string;
-      lastName: string;
-      email: string;
-      contactNo: string;
-      dob: string;
-      classroomName: string;
-      contactPerson: string;
-    }) => {
-      return fetch(`https://localhost:7099/Student`, {
-        method: "post",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+    mutationFn: async (formData: StudentInterface) => {
+      return commonMutation(
+        `https://localhost:7099/Student`,
+        formData,
+        props.addOrEdit === "edit"
+      );
     },
     onSuccess: () => {
       queryClient.invalidateQueries([`all${props.slug}s`]);
@@ -56,13 +43,14 @@ const StudentAddEdit = (props: Props) => {
   });
 
   const initialValues = {
-    firstName: "",
-    lastName: "",
-    email: "",
-    contactNo: "",
-    dob: "",
-    classroomName: "",
-    contactPerson: "",
+    id: props.data.id || 0,
+    firstName: props.data.firstName || "",
+    lastName: props.data.lastName || "",
+    email: props.data.email || "",
+    contactNo: props.data.contactNo || "",
+    dob: props.data.dob || "",
+    classroomName: props.data.classroomName || "",
+    contactPerson: props.data.contactPerson || "",
   };
 
   const validationSchema = yup.object({
@@ -98,7 +86,10 @@ const StudentAddEdit = (props: Props) => {
         <span className="close" onClick={() => props.setOpen(false)}>
           X
         </span>
-        <h1>Add new {props.slug}</h1>
+        <h1>
+          {props.addOrEdit ? "Edit " : "Add new"}
+          {props.slug}
+        </h1>
         <form onSubmit={formik.handleSubmit}>
           <TextField
             id="firstName"
@@ -195,9 +186,9 @@ const StudentAddEdit = (props: Props) => {
               formik.touched.classroomName && formik.errors.classroomName
             }
           >
-            {currencies.map((option) => (
-              <MenuItem key={option.value} value={option.value}>
-                {option.label}
+            {classes?.map((option: ClassInterface) => (
+              <MenuItem key={option.name} value={option.name}>
+                {option.name}
               </MenuItem>
             ))}
           </TextField>
