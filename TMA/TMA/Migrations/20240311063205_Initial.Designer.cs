@@ -11,8 +11,8 @@ using TMA.Data;
 namespace TMA.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240310035628_change_1")]
-    partial class change_1
+    [Migration("20240311063205_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

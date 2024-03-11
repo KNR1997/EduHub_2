@@ -1,4 +1,6 @@
-﻿namespace TMA.Dtos
+﻿using Microsoft.VisualBasic;
+
+namespace TMA.Dtos
 {
     public class StudentReportDto
     {

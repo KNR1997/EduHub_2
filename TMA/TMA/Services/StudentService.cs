@@ -32,39 +32,55 @@ namespace TMA.Services
 
         public void SaveOrUpdateStudent(StudentFormDto updateDTO)
         {
-            Student student;
-            bool isNew = (updateDTO.Id == 0);
-
-            if (!isNew)
+            try
             {
-                student = _studentRepository.GetStudentById(updateDTO.Id);
+                Student student;
+                bool isNew = (updateDTO.Id == 0);
+
+                if (!isNew)
+                {
+                    student = _studentRepository.GetStudentById(updateDTO.Id);
+                }
+                else
+                {
+                    student = new Student();
+                }
+
+                student.FirstName = updateDTO.FirstName;
+                student.LastName = updateDTO.LastName;
+                student.Email = updateDTO.ContactPerson;
+                student.ContactPerson = updateDTO.ContactPerson;
+                student.ContactNo = updateDTO.ContactNo;
+                student.Dob = updateDTO.Dob;
+                student.ClassroomName = updateDTO.ClassroomName;
+                student.Classroom = _classroomRepository.GetClassroomByName(updateDTO.ClassroomName);
+
+                // Calculate age
+                DateTime currentDate = DateTime.UtcNow;
+                int age = currentDate.Year - updateDTO.Dob.Year;
+
+                // Check if the birthday has occurred this year
+                if (currentDate < updateDTO.Dob.AddYears(age))
+                {
+                    age--;
+                }
+                student.Age = age;
+
+                _studentRepository.SaveOrUpdateStudent(student);
             }
-            else
+            catch (Exception ex)
             {
-                student = new Student();
+                // Handle the exception here, you can log it or perform any other necessary actions.
+                // For example, you can log the exception to a logging system or rethrow it.
+                // It's generally not recommended to catch all exceptions unless you have a good reason.
+                // Consider catching specific exceptions that you expect might occur.
+
+                // Log the exception (replace with your logging mechanism)
+                Console.WriteLine($"Error in SaveOrUpdateStudent: {ex.Message}");
+
+                // Optionally rethrow the exception to propagate it further
+                throw;
             }
-
-            student.FirstName = updateDTO.FirstName;
-            student.LastName = updateDTO.LastName;
-            student.Email = updateDTO.ContactPerson;
-            student.ContactPerson = updateDTO.ContactPerson;
-            student.ContactNo = updateDTO.ContactNo;
-            student.Dob = updateDTO.Dob;
-            student.ClassroomName = updateDTO.ClassroomName;
-            student.Classroom = _classroomRepository.GetClassroomByName(updateDTO.ClassroomName);
-
-            // Calculate age
-            DateTime currentDate = DateTime.UtcNow;
-            int age = currentDate.Year - updateDTO.Dob.Year;
-
-            // Check if the birthday has occurred this year
-            if (currentDate < updateDTO.Dob.AddYears(age))
-            {
-                age--;
-            }
-            student.Age = age;
-            
-            _studentRepository.SaveOrUpdateStudent(student);
         }
 
         public void DeleteClassroom(int studentId)

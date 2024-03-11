@@ -1,4 +1,6 @@
-﻿namespace TMA.Models
+﻿using Microsoft.VisualBasic;
+
+namespace TMA.Models
 {
     public class Student
     {

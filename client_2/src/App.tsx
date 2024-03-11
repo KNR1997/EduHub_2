@@ -16,6 +16,7 @@ import {
 import Students from "./pages/students/Students";
 import { createTheme, ThemeProvider, Theme, useTheme } from '@mui/material/styles';
 const queryClient = new QueryClient();
+import { outlinedInputClasses } from "@mui/material/OutlinedInput";
 
 const customTheme = (outerTheme: Theme) =>
   createTheme({
@@ -26,9 +27,9 @@ const customTheme = (outerTheme: Theme) =>
       MuiTextField: {
         styleOverrides: {
           root: {
-            '--TextField-brandBorderColor': '#bf6fc9',
-            '--TextField-brandBorderHoverColor': '#bf6fc9',
-            '--TextField-brandBorderFocusedColor': '#6F7E8C',
+            '--TextField-brandBorderColor': 'rgba(255, 255, 255, 0.23)',
+            '--TextField-brandBorderHoverColor': '#fff',
+            '--TextField-brandBorderFocusedColor': '#346bc9',
             '& label.Mui-focused': {
               color: 'var(--TextField-brandBorderFocusedColor)',
             },
@@ -38,55 +39,57 @@ const customTheme = (outerTheme: Theme) =>
       MuiFormLabel: {
         styleOverrides: {
           root: {
-            'color': '#white'
+            '&': {
+              color: 'rgba(255, 255, 255, 0.23)',
+            }
+          }
+        },
+      },
+      MuiOutlinedInput: {
+        styleOverrides: {
+          root: {
+            [`& .${outlinedInputClasses.notchedOutline}`]: {
+              borderColor: 'var(--TextField-brandBorderColor)',
+            },
+            [`&:hover .${outlinedInputClasses.notchedOutline}`]: {
+              borderColor: 'var(--TextField-brandBorderHoverColor)',
+            },
+            [`&.Mui-focused .${outlinedInputClasses.notchedOutline}`]: {
+              borderColor: 'var(--TextField-brandBorderFocusedColor)',
+            },
           },
         },
       },
-      // MuiOutlinedInput: {
-      //   styleOverrides: {
-      //     notchedOutline: {
-      //       borderColor: 'var(--TextField-brandBorderColor)',
-      //     },
-      //     root: {
-      //       [`&:hover .${outlinedInputClasses.notchedOutline}`]: {
-      //         borderColor: 'var(--TextField-brandBorderHoverColor)',
-      //       },
-      //       [`&.Mui-focused .${outlinedInputClasses.notchedOutline}`]: {
-      //         borderColor: 'var(--TextField-brandBorderFocusedColor)',
-      //       },
-      //     },
-      //   },
-      // },
-      // MuiFilledInput: {
-      //   styleOverrides: {
-      //     root: {
-      //       '&::before, &::after': {
-      //         borderBottom: '2px solid var(--TextField-brandBorderColor)',
-      //       },
-      //       '&:hover:not(.Mui-disabled, .Mui-error):before': {
-      //         borderBottom: '2px solid var(--TextField-brandBorderHoverColor)',
-      //       },
-      //       '&.Mui-focused:after': {
-      //         borderBottom: '2px solid var(--TextField-brandBorderFocusedColor)',
-      //       },
-      //     },
-      //   },
-      // },
-      // MuiInput: {
-      //   styleOverrides: {
-      //     root: {
-      //       '&::before': {
-      //         borderBottom: '2px solid var(--TextField-brandBorderColor)',
-      //       },
-      //       '&:hover:not(.Mui-disabled, .Mui-error):before': {
-      //         borderBottom: '2px solid var(--TextField-brandBorderHoverColor)',
-      //       },
-      //       '&.Mui-focused:after': {
-      //         borderBottom: '2px solid var(--TextField-brandBorderFocusedColor)',
-      //       },
-      //     },
-      //   },
-      // },
+      MuiFilledInput: {
+        styleOverrides: {
+          root: {
+            '&::before, &::after': {
+              borderBottom: '2px solid var(--TextField-brandBorderColor)',
+            },
+            '&:hover:not(.Mui-disabled, .Mui-error):before': {
+              borderBottom: '2px solid var(--TextField-brandBorderHoverColor)',
+            },
+            '&.Mui-focused:after': {
+              borderBottom: '2px solid var(--TextField-brandBorderFocusedColor)',
+            },
+          },
+        },
+      },
+      MuiInput: {
+        styleOverrides: {
+          root: {
+            '&::before': {
+              borderBottom: '2px solid var(--TextField-brandBorderColor)',
+            },
+            '&:hover:not(.Mui-disabled, .Mui-error):before': {
+              borderBottom: '2px solid var(--TextField-brandBorderHoverColor)',
+            },
+            '&.Mui-focused:after': {
+              borderBottom: '2px solid var(--TextField-brandBorderFocusedColor)',
+            },
+          },
+        },
+      },
     },
   });
   
