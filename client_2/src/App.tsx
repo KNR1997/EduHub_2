@@ -17,6 +17,7 @@ import Students from "./pages/students/Students";
 import { createTheme, ThemeProvider, Theme, useTheme } from '@mui/material/styles';
 const queryClient = new QueryClient();
 import { outlinedInputClasses } from "@mui/material/OutlinedInput";
+import Classrooms from "./pages/classrooms/Classrooms";
 
 const customTheme = (outerTheme: Theme) =>
   createTheme({
@@ -154,6 +155,10 @@ function App() {
         {
           path: "/students",
           element: <Students />,
+        },
+        {
+          path: "/classrooms",
+          element: <Classrooms />,
         },
       ],
     },

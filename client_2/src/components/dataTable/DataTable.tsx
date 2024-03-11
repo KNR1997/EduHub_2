@@ -5,7 +5,7 @@ import {
   GridToolbar,
 } from "@mui/x-data-grid";
 import "./dataTable.scss";
-import { StudentInterface } from "../../interfaces/Entity.type";
+import { StudentInterface, ClassInterface } from "../../interfaces/Entity.type";
 import { useState } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import Button from "@mui/material/Button";
@@ -19,7 +19,7 @@ type Props = {
   columns: GridColDef[];
   rows: object[];
   slug: string;
-  editRow: (data: StudentInterface) => void;
+  editRow: (data: StudentInterface | ClassInterface) => void;
 };
 
 const DataTable = (props: Props) => {
@@ -47,13 +47,11 @@ const DataTable = (props: Props) => {
   };
 
   const handleEdit = (params: GridCellParams) => {
-    console.log("params: ", params);
     props.editRow(params.row);
   };
 
   const handleDeleteClick = (params: GridCellParams) => {
     openDialogBox(true);
-    console.log(params.row)
     setParamId(params.row.id)
   };
 

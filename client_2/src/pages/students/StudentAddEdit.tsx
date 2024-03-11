@@ -87,7 +87,7 @@ const StudentAddEdit = (props: Props) => {
           X
         </span>
         <h1>
-          {props.addOrEdit ? "Edit " : "Add new"}
+          {props.addOrEdit === "edit" ? "Edit " : "Add new"}
           {props.slug}
         </h1>
         <form onSubmit={formik.handleSubmit}>

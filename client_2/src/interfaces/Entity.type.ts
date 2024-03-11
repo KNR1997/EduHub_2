@@ -10,6 +10,6 @@ export type StudentInterface = {
 };
 
 export type ClassInterface = {
-    id: string
+    id: number
     name: string;
 };
