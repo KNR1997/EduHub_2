@@ -43,9 +43,9 @@ namespace TMA.Controllers
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
-        public IActionResult DeleteSubject(int studentId)
+        public IActionResult DeleteSubject(int subjectId)
         {
-            _subjectService.DeleteSubject(studentId);
+            _subjectService.DeleteSubject(subjectId);
             return Ok("Successfully deleted");
         }
     }

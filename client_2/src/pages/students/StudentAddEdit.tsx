@@ -17,7 +17,7 @@ type Props = {
 };
 
 const StudentAddEdit = (props: Props) => {
-  // Fetch all classes
+  // Fetch all classes for dropdown
   const { data: classes } = useQuery(["allClasses"], async () => {
     const response = await fetch("https://localhost:7099/Classroom");
     if (!response.ok) {
@@ -26,7 +26,7 @@ const StudentAddEdit = (props: Props) => {
     return response.json();
   });
 
-  // API Call for Student Add/Edit
+  // Add/Edit Api call
   const queryClient = useQueryClient();
 
   const mutation = useMutation({
@@ -42,6 +42,7 @@ const StudentAddEdit = (props: Props) => {
     },
   });
 
+  // Form initial values
   const initialValues = {
     id: props.data.id || 0,
     firstName: props.data.firstName || "",
@@ -53,6 +54,7 @@ const StudentAddEdit = (props: Props) => {
     contactPerson: props.data.contactPerson || "",
   };
 
+  // form validation schema
   const validationSchema = yup.object({
     firstName: yup.string().required("FirstName is required"),
     lastName: yup.string().required("LastName is required"),
@@ -87,7 +89,7 @@ const StudentAddEdit = (props: Props) => {
           X
         </span>
         <h1>
-          {props.addOrEdit === "edit" ? "Edit " : "Add new"}
+          {props.addOrEdit === "edit" ? "Edit " : "Add "}
           {props.slug}
         </h1>
         <form onSubmit={formik.handleSubmit}>

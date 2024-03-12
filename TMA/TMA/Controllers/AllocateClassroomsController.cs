@@ -18,7 +18,7 @@ namespace TMA.Controllers
         [HttpPost]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
-        public IActionResult AllocateClassrooms([FromBody] AllocateClassroomsDto allocateClassroomsDto)
+        public IActionResult AllocateClassrooms([FromBody] AllocateClassroomDto allocateClassroomsDto)
         {
             if (allocateClassroomsDto == null)
                 return BadRequest(ModelState);
@@ -26,6 +26,30 @@ namespace TMA.Controllers
             _allocateClassroom.AllocateClassrooms(allocateClassroomsDto);
 
             return Ok("Successfully created");
+        }
+
+        [HttpGet]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        public ActionResult<List<ClassroomDto>> GetAllocatedClassrooms(int teacherId)
+        {
+
+            List<ClassroomDto> classroomDtos = _allocateClassroom.GetAllocatedSubjects(teacherId);
+
+            return Ok(classroomDtos);
+        }
+
+        [HttpDelete]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        public IActionResult DeallocateClassroom([FromBody] AllocateClassroomDto allocateClassroomDto)
+        {
+            if (allocateClassroomDto == null)
+                return BadRequest(ModelState);
+
+            _allocateClassroom.DeallocateClassroom(allocateClassroomDto);
+
+            return Ok("Successfully deallocated classroom");
         }
 
     }

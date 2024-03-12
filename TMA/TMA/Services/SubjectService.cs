@@ -45,8 +45,25 @@ namespace TMA.Services
 
         public void DeleteSubject(int subjectId)
         {
-            Subject subject = _subjectRepository.GetSubjectById(subjectId);
-            _subjectRepository.DeleteSubject(subject);
+            try
+            {
+                Subject subject = _subjectRepository.GetSubjectById(subjectId);
+                _subjectRepository.DeleteSubject(subject);
+            }
+            catch (Exception ex)
+            {
+                // Handle the exception here, you can log it or perform any other necessary actions.
+                // For example, you can log the exception to a logging system or rethrow it.
+                // It's generally not recommended to catch all exceptions unless you have a good reason.
+                // Consider catching specific exceptions that you expect might occur.
+
+                // Log the exception (replace with your logging mechanism)
+                Console.WriteLine($"Error in SaveOrUpdateStudent: {ex.Message}");
+
+                // Optionally rethrow the exception to propagate it further
+                throw;
+            }
+
         }
     }
 }

@@ -5,38 +5,41 @@ import { useQuery } from "@tanstack/react-query";
 import TeacherAddEdit from "./Teacher.AddEdit";
 import { TeacherInterface } from "../../interfaces/Entity.type";
 import { columns } from "./columns";
+import { Button } from "@mui/material";
 
 export const Teachers = () => {
   const [open, setOpen] = useState(false);
   const [addEdit, setAddEdit] = useState<"add" | "edit">("add");
-  const [editData, setEditData] = useState<TeacherInterface>(
+  const [teacher, setTeacher] = useState<TeacherInterface>(
     {} as TeacherInterface
   );
 
-  // TEST THE API
+  // GET ALL TEACHERS
   const { isLoading, data } = useQuery({
-    queryKey: ["allStudents"],
+    queryKey: ["allTeachers"],
     queryFn: () =>
       fetch("https://localhost:7099/Teacher").then((res) => res.json()),
   });
 
-  const editStudent = (data: TeacherInterface) => {
+  const edit = (data: TeacherInterface) => {
     setOpen(true);
     setAddEdit("edit");
-    setEditData(data);
+    setTeacher(data);
   };
 
-  const addStudent = () => {
+  const addNew = () => {
     setOpen(true);
     setAddEdit("add");
-    setEditData({} as TeacherInterface);
+    setTeacher({} as TeacherInterface);
   };
 
   return (
     <div className="products">
       <div className="info">
         <h1>Teachers</h1>
-        <button onClick={addStudent}>Add New Teacher</button>
+        <Button variant="contained" onClick={addNew}>
+          Add New
+        </Button>
       </div>
 
       {isLoading ? (
@@ -46,7 +49,7 @@ export const Teachers = () => {
           slug="Student"
           columns={columns}
           rows={data}
-          editRow={editStudent}
+          editRow={edit}
         />
       )}
       {open && (
@@ -55,7 +58,7 @@ export const Teachers = () => {
           columns={columns}
           setOpen={setOpen}
           addOrEdit={addEdit}
-          data={editData}
+          data={teacher}
         />
       )}
     </div>

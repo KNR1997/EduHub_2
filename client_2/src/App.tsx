@@ -20,6 +20,9 @@ import { outlinedInputClasses } from "@mui/material/OutlinedInput";
 import Classrooms from "./pages/classrooms/Classrooms";
 import { Teachers } from "./pages/teachers/Teachers";
 import Subjects from "./pages/subjects/Subjects";
+import SubjectAlloate from "./pages/SubjectAllocate/SubjectAllocate";
+import SubjectAllocate from "./pages/SubjectAllocate/SubjectAllocate";
+import ClassroomAllocate from "./pages/ClassroomAllocate/ClassroomAllocate";
 
 const customTheme = (outerTheme: Theme) =>
   createTheme({
@@ -169,6 +172,14 @@ function App() {
         {
           path: "/subjects",
           element: <Subjects />,
+        },
+        {
+          path: "/subjectAllocate",
+          element: <SubjectAllocate />,
+        },
+        {
+          path: "/classroomAllocate",
+          element: <ClassroomAllocate />,
         },
       ],
     },

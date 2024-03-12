@@ -8,22 +8,46 @@ namespace TMA.Controllers
     [Route("[controller]")]
     public class AllocateSubjectsController : Controller
     {
-        private readonly AllocateClassroomService _allocateClassroomService;
+        private readonly AllocateSubjectsService _allocateSubjectsService;
 
-        public AllocateSubjectsController(AllocateClassroomService allocateClassroomService)
+        public AllocateSubjectsController(AllocateSubjectsService allocateSubjectsService)
         {
-            _allocateClassroomService = allocateClassroomService;
+            _allocateSubjectsService = allocateSubjectsService;
         }
 
         [HttpPost]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
-        public IActionResult AllocateClassrooms([FromBody] AllocateClassroomsDto allocateClassroomsDto)
+        public IActionResult AllocateSubject([FromBody] AllocateSubjectDto allocateSubjectDto)
         {
-            if (allocateClassroomsDto == null)
+            if (allocateSubjectDto == null)
                 return BadRequest(ModelState);
 
-            _allocateClassroomService.AllocateClassrooms(allocateClassroomsDto);
+            _allocateSubjectsService.AllocateSubject(allocateSubjectDto);
+
+            return Ok("Successfully created");
+        }
+
+        [HttpGet]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        public ActionResult<List<SubjectDto>> GetAllocatedSubjects(int teacherId)
+        {
+
+            List<SubjectDto> subjectDtos = _allocateSubjectsService.GetAllocatedSubjects(teacherId);
+
+            return Ok(subjectDtos);
+        }
+
+        [HttpDelete]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        public IActionResult DeallocateSubject([FromBody] AllocateSubjectDto allocateSubjectDto)
+        {
+            if (allocateSubjectDto == null)
+                return BadRequest(ModelState);
+
+            _allocateSubjectsService.DeallocateSubject(allocateSubjectDto);
 
             return Ok("Successfully created");
         }

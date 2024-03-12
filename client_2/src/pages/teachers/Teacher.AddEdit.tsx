@@ -4,7 +4,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { TextField } from "@mui/material";
 import { useFormik } from "formik";
 import * as yup from "yup";
-import { StudentInterface, TeacherInterface } from "../../interfaces/Entity.type";
+import { TeacherInterface } from "../../interfaces/Entity.type";
 import { commonMutation } from "./api";
 
 type Props = {
@@ -12,7 +12,7 @@ type Props = {
   columns: GridColDef[];
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
   addOrEdit: "add" | "edit";
-  data: StudentInterface;
+  data: TeacherInterface;
 };
 
 const TeacherAddEdit = (props: Props) => {

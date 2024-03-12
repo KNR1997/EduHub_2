@@ -69,6 +69,18 @@ export const menu = [
         url: "/subjects",
         icon: "post2.svg",
       },
+      {
+        id: 8,
+        title: "SubjectsAllocate",
+        url: "/subjectAllocate",
+        icon: "post2.svg",
+      },
+      {
+        id: 8,
+        title: "ClassroomAllocate",
+        url: "/classroomAllocate",
+        icon: "post2.svg",
+      },
     ],
   },
   {

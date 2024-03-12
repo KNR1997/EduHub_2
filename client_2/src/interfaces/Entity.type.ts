@@ -26,3 +26,8 @@ export type SubjectInterface = {
     id: number
     name: string;
 };
+
+export type SubjectAllocateInterface = {
+    teacherId: number
+    subjectId: number
+};

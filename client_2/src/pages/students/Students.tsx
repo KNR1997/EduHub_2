@@ -5,28 +5,29 @@ import { useQuery } from "@tanstack/react-query";
 import StudentAddEdit from "./StudentAddEdit";
 import { StudentInterface } from "../../interfaces/Entity.type";
 import { columns } from "./columns";
+import { Button } from "@mui/material";
 
 const Students = () => {
   const [open, setOpen] = useState(false);
   const [addEdit, setAddEdit] = useState<"add" | "edit">("add");
-  const [Student, setStudent] = useState<StudentInterface>(
+  const [student, setStudent] = useState<StudentInterface>(
     {} as StudentInterface
   );
 
-  // TEST THE API
+  // GET ALL STUDENTS
   const { isLoading, data } = useQuery({
     queryKey: ["allStudents"],
     queryFn: () =>
       fetch("https://localhost:7099/Student").then((res) => res.json()),
   });
 
-  const editStudent = (data: StudentInterface) => {
+  const edit = (data: StudentInterface) => {
     setOpen(true);
     setAddEdit("edit");
     setStudent(data);
   };
 
-  const addStudent = () => {
+  const addNew = () => {
     setOpen(true);
     setAddEdit("add");
     setStudent({} as StudentInterface);
@@ -36,7 +37,9 @@ const Students = () => {
     <div className="products">
       <div className="info">
         <h1>Students</h1>
-        <button onClick={addStudent}>Add New Student</button>
+        <Button variant="contained" onClick={addNew}>
+          Add New
+        </Button>
       </div>
 
       {isLoading ? (
@@ -46,16 +49,17 @@ const Students = () => {
           slug="Student"
           columns={columns}
           rows={data}
-          editRow={editStudent}
+          editRow={edit}
         />
       )}
+
       {open && (
         <StudentAddEdit
           slug="Student"
           columns={columns}
           setOpen={setOpen}
           addOrEdit={addEdit}
-          data={Student}
+          data={student}
         />
       )}
     </div>

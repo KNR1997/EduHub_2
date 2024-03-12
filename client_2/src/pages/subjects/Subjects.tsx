@@ -5,6 +5,7 @@ import { useQuery } from "@tanstack/react-query";
 import SubjectAddEdit from "./Subject.AddEdit";
 import { SubjectInterface } from "../../interfaces/Entity.type";
 import { columns } from "./columns";
+import { Button } from "@mui/material";
 
 export const Subjects = () => {
   const [open, setOpen] = useState(false);
@@ -13,20 +14,20 @@ export const Subjects = () => {
     {} as SubjectInterface
   );
 
-  // TEST THE API
+  // GET ALL SUBJECTS
   const { isLoading, data } = useQuery({
-    queryKey: ["allStudents"],
+    queryKey: ["allSubjects"],
     queryFn: () =>
       fetch("https://localhost:7099/Subject").then((res) => res.json()),
   });
 
-  const editClassroom = (data: SubjectInterface) => {
+  const edit = (data: SubjectInterface) => {
     setOpen(true);
     setAddEdit("edit");
     setEditData(data);
   };
 
-  const addClassroom = () => {
+  const addNew = () => {
     setOpen(true);
     setAddEdit("add");
     setEditData({} as SubjectInterface);
@@ -36,7 +37,9 @@ export const Subjects = () => {
     <div className="products">
       <div className="info">
         <h1>Subjects</h1>
-        <button onClick={addClassroom}>Add New Subject</button>
+        <Button variant="contained" onClick={addNew}>
+          Add New
+        </Button>
       </div>
 
       {isLoading ? (
@@ -46,7 +49,7 @@ export const Subjects = () => {
           slug="Subject"
           columns={columns}
           rows={data}
-          editRow={editClassroom}
+          editRow={edit}
         />
       )}
       {open && (

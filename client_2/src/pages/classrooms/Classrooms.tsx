@@ -5,6 +5,7 @@ import { useQuery } from "@tanstack/react-query";
 import ClassroomAddEdit from "./ClassroomAddEdit";
 import { ClassInterface } from "../../interfaces/Entity.type";
 import { columns } from "./columns";
+import { Button } from "@mui/material";
 
 export const Classrooms = () => {
   const [open, setOpen] = useState(false);
@@ -13,20 +14,20 @@ export const Classrooms = () => {
     {} as ClassInterface
   );
 
-  // TEST THE API
+  // GET ALL CLASSROOMS
   const { isLoading, data } = useQuery({
-    queryKey: ["allStudents"],
+    queryKey: ["allClassrooms"],
     queryFn: () =>
       fetch("https://localhost:7099/Classroom").then((res) => res.json()),
   });
 
-  const editClassroom = (data: ClassInterface) => {
+  const edit = (data: ClassInterface) => {
     setOpen(true);
     setAddEdit("edit");
     setClassroom(data);
   };
 
-  const addClassroom = () => {
+  const addNew = () => {
     setOpen(true);
     setAddEdit("add");
     setClassroom({} as ClassInterface);
@@ -36,7 +37,9 @@ export const Classrooms = () => {
     <div className="products">
       <div className="info">
         <h1>Classrooms</h1>
-        <button onClick={addClassroom}>Add New Classroom</button>
+        <Button variant="contained" onClick={addNew}>
+          Add New
+        </Button>
       </div>
 
       {isLoading ? (
@@ -46,7 +49,7 @@ export const Classrooms = () => {
           slug="Classroom"
           columns={columns}
           rows={data}
-          editRow={editClassroom}
+          editRow={edit}
         />
       )}
       {open && (
