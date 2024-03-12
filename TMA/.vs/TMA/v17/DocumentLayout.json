@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\repository\\teacherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\eduhub_2\\tma\\tma\\services\\subjectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\services\\subjectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|d:\\eduhub_2\\tma\\tma\\interfaces\\iteacherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC639263-8949-4010-97FF-6A80C575AE21}|TMA\\TMA.csproj|solutionrelative:tma\\interfaces\\iteacherrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -38,11 +42,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "SubjectService.cs",
+              "DocumentMoniker": "D:\\EduHub_2\\TMA\\TMA\\Services\\SubjectService.cs",
+              "RelativeDocumentMoniker": "TMA\\Services\\SubjectService.cs",
+              "ToolTip": "D:\\EduHub_2\\TMA\\TMA\\Services\\SubjectService.cs",
+              "RelativeToolTip": "TMA\\Services\\SubjectService.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAUwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T11:34:31.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ClassroomRepository.cs",
               "DocumentMoniker": "D:\\EduHub_2\\TMA\\TMA\\Repository\\ClassroomRepository.cs",
               "RelativeDocumentMoniker": "TMA\\Repository\\ClassroomRepository.cs",
@@ -59,16 +76,16 @@
               "Title": "TeacherRepository.cs",
               "DocumentMoniker": "D:\\EduHub_2\\TMA\\TMA\\Repository\\TeacherRepository.cs",
               "RelativeDocumentMoniker": "TMA\\Repository\\TeacherRepository.cs",
-              "ToolTip": "D:\\EduHub_2\\TMA\\TMA\\Repository\\TeacherRepository.cs*",
-              "RelativeToolTip": "TMA\\Repository\\TeacherRepository.cs*",
-              "ViewState": "AQIAAE8AAAAAAAAAAAAowGUAAAArAAAA",
+              "ToolTip": "D:\\EduHub_2\\TMA\\TMA\\Repository\\TeacherRepository.cs",
+              "RelativeToolTip": "TMA\\Repository\\TeacherRepository.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAAAcwF8AAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-12T11:24:09.858Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ITeacherRepository.cs",
               "DocumentMoniker": "D:\\EduHub_2\\TMA\\TMA\\Interfaces\\ITeacherRepository.cs",
               "RelativeDocumentMoniker": "TMA\\Interfaces\\ITeacherRepository.cs",
@@ -81,7 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "AllocateClassroomService.cs",
               "DocumentMoniker": "D:\\EduHub_2\\TMA\\TMA\\Services\\AllocateClassroomService.cs",
               "RelativeDocumentMoniker": "TMA\\Services\\AllocateClassroomService.cs",
@@ -94,7 +111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "AllocateSubjectsService.cs",
               "DocumentMoniker": "D:\\EduHub_2\\TMA\\TMA\\Services\\AllocateSubjectsService.cs",
               "RelativeDocumentMoniker": "TMA\\Services\\AllocateSubjectsService.cs",
@@ -107,7 +124,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "AllocateClassroomsController.cs",
               "DocumentMoniker": "D:\\EduHub_2\\TMA\\TMA\\Controllers\\AllocateClassroomsController.cs",
               "RelativeDocumentMoniker": "TMA\\Controllers\\AllocateClassroomsController.cs",
@@ -120,7 +137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "AllocateSubjectsController.cs",
               "DocumentMoniker": "D:\\EduHub_2\\TMA\\TMA\\Controllers\\AllocateSubjectsController.cs",
               "RelativeDocumentMoniker": "TMA\\Controllers\\AllocateSubjectsController.cs",

@@ -23,6 +23,7 @@ import Subjects from "./pages/subjects/Subjects";
 import SubjectAlloate from "./pages/SubjectAllocate/SubjectAllocate";
 import SubjectAllocate from "./pages/SubjectAllocate/SubjectAllocate";
 import ClassroomAllocate from "./pages/ClassroomAllocate/ClassroomAllocate";
+import StudentDetailReport from "./pages/StudentDetailReport/StudentDetailReport";
 
 const customTheme = (outerTheme: Theme) =>
   createTheme({
@@ -180,6 +181,10 @@ function App() {
         {
           path: "/classroomAllocate",
           element: <ClassroomAllocate />,
+        },
+        {
+          path: "/studentDetailReport",
+          element: <StudentDetailReport />,
         },
       ],
     },
