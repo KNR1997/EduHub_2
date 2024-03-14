@@ -54,8 +54,7 @@
               "RelativeToolTip": "TMA\\Services\\SubjectService.cs",
               "ViewState": "AQIAAB4AAAAAAAAAAAAUwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-12T11:34:31.281Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-12T11:34:31.281Z"
             },
             {
               "$type": "Document",
@@ -67,8 +66,7 @@
               "RelativeToolTip": "TMA\\Repository\\ClassroomRepository.cs",
               "ViewState": "AQIAACsAAAAAAAAAAAA+wAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-12T11:32:26.855Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-12T11:32:26.855Z"
             },
             {
               "$type": "Document",
@@ -78,7 +76,7 @@
               "RelativeDocumentMoniker": "TMA\\Repository\\TeacherRepository.cs",
               "ToolTip": "D:\\EduHub_2\\TMA\\TMA\\Repository\\TeacherRepository.cs",
               "RelativeToolTip": "TMA\\Repository\\TeacherRepository.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAAAcwF8AAAAaAAAA",
+              "ViewState": "AQIAACwAAAAAAAAAAAAswEUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-12T11:24:09.858Z",
               "EditorCaption": ""
@@ -93,8 +91,7 @@
               "RelativeToolTip": "TMA\\Interfaces\\ITeacherRepository.cs",
               "ViewState": "AQIAAAQAAAAAAAAAAAAYwBcAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-12T11:23:57.718Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-12T11:23:57.718Z"
             },
             {
               "$type": "Document",
@@ -106,8 +103,7 @@
               "RelativeToolTip": "TMA\\Services\\AllocateClassroomService.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAAYwCYAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-12T11:20:37.481Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-12T11:20:37.481Z"
             },
             {
               "$type": "Document",
@@ -119,8 +115,7 @@
               "RelativeToolTip": "TMA\\Services\\AllocateSubjectsService.cs",
               "ViewState": "AQIAAA0AAAAAAAAAAAA5wCcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-12T11:21:04.309Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-12T11:21:04.309Z"
             },
             {
               "$type": "Document",
@@ -132,8 +127,7 @@
               "RelativeToolTip": "TMA\\Controllers\\AllocateClassroomsController.cs",
               "ViewState": "AQIAABgAAAAAAAAAAAAywCwAAABQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-12T11:18:20.836Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-12T11:18:20.836Z"
             },
             {
               "$type": "Document",
@@ -145,8 +139,7 @@
               "RelativeToolTip": "TMA\\Controllers\\AllocateSubjectsController.cs",
               "ViewState": "AQIAAA0AAAAAAAAAAAAowB4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-12T11:18:14.075Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-12T11:18:14.075Z"
             }
           ]
         }
